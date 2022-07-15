@@ -3,6 +3,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:service_app/looking%20for%20cleaner%20_screns/page_15_myorder/tab_screen_one.dart';
+import 'package:service_app/looking%20for%20cleaner%20_screns/page_15_myorder/tab_screen_three.dart';
 import 'package:service_app/looking%20for%20cleaner%20_screns/page_15_myorder/tab_screen_two.dart';
 
 class page15 extends StatelessWidget {
@@ -14,10 +15,11 @@ class page15 extends StatelessWidget {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.black,
           bottom: new PreferredSize(
             preferredSize: new Size(0, 177.0),
             child: Container(
-              color: Colors.black,
+              color: HexColor("#202020"),
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Column(
@@ -63,7 +65,7 @@ class page15 extends StatelessWidget {
                             fontWeight: FontWeight.normal,
                             fontSize: 16)),
                     Container(
-                      color: Colors.black,
+                      color: HexColor("#202020"),
                       child: TabBar(
                         labelStyle: TextStyle(
                             fontSize: 20,
@@ -97,7 +99,7 @@ class page15 extends StatelessWidget {
           children: [
             TabScreen_One(),
             TabScreen_Two(),
-            TabScreen_Two(),
+            TabScreenThree(),
           ],
         ),
       ),

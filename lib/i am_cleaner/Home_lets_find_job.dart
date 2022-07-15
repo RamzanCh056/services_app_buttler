@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:service_app/i%20am_cleaner/my_Home_apply.dart';
 
+import 'Bottom_sheets/bottomsheet1.dart';
+
 class HomeLetsFindJob extends StatefulWidget {
   const HomeLetsFindJob({Key? key}) : super(key: key);
 
@@ -120,12 +122,17 @@ class _HomeLetsFindJobState extends State<HomeLetsFindJob> {
                                         radius: 25,
                                         backgroundImage:
                                             AssetImage("images/pexels.png")),
-                                    title: Text(
-                                      "My Home",
-                                      style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold),
+                                    title: GestureDetector(
+                                      onTap: () {
+                                        Get.to(MyHomeAplly());
+                                      },
+                                      child: Text(
+                                        "My Home",
+                                        style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold),
+                                      ),
                                     ),
                                     subtitle: Row(
                                       children: [
@@ -439,9 +446,9 @@ class _HomeLetsFindJobState extends State<HomeLetsFindJob> {
                                                 color: Colors.green.shade800,
                                               )),
                                           onPressed: () {
-                                            Get.to(MyHomeAplly());
+                                            displayBottomSheet(context);
                                           },
-                                          child: Text("Approve",
+                                          child: Text("Apply",
                                               style: TextStyle(
                                                 color: Colors.white,
                                               )),
@@ -788,10 +795,8 @@ class _HomeLetsFindJobState extends State<HomeLetsFindJob> {
                                               side: BorderSide(
                                                 color: Colors.green.shade800,
                                               )),
-                                          onPressed: () {
-                                            Get.to(MyHomeAplly());
-                                          },
-                                          child: Text("Approve",
+                                          onPressed: () {},
+                                          child: Text("Apply",
                                               style: TextStyle(
                                                 color: Colors.white,
                                               )),
@@ -813,6 +818,117 @@ class _HomeLetsFindJobState extends State<HomeLetsFindJob> {
           )
         ],
       )),
+    );
+  }
+
+  displayBottomSheet(BuildContext context) {
+    showModalBottomSheet(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(
+          top: Radius.circular(configSize(context).height * 0.048),
+        ),
+      ),
+      context: context,
+      builder: (context) => Container(
+        height: configSize(context).height * 0.4,
+        child: Container(
+          decoration: BoxDecoration(
+              color: Color(0xffffffff).withOpacity(0.1),
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(configSize(context).height * 0.048),
+                topRight: Radius.circular(configSize(context).height * 0.048),
+              )),
+          child: Padding(
+            padding: EdgeInsets.only(
+              left: configSize(context).height * 0.027,
+              right: configSize(context).height * 0.027,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(
+                    top: configSize(context).height * 0.058,
+                  ),
+                  child: Row(
+                    children: [
+                      Image(
+                        image: AssetImage('assets/icons/writing_sign.png'),
+                        width: configSize(context).height * 0.038,
+                        height: configSize(context).height * 0.038,
+                      ),
+                      SizedBox(
+                        width: configSize(context).width * 0.01,
+                      ),
+                      Text(
+                        'Write a proposal',
+                        style: TextStyle(
+                          fontSize: configSize(context).height * 0.03,
+                          color: Colors.black,
+                          fontFamily: 'SF-Pro-Display',
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: configSize(context).height * 0.018,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(
+                          configSize(context).height * 0.01),
+                    ),
+                    hintText: 'Type here',
+                    hintStyle: TextStyle(
+                      fontSize: configSize(context).width * 0.036,
+                      fontFamily: 'SF-Pro-Dis-Regular',
+                      color: Color(0xff202020).withOpacity(0.5),
+                    ),
+                    contentPadding: EdgeInsets.symmetric(
+                        horizontal: configSize(context).height * 0.027,
+                        vertical: configSize(context).height * 0.025),
+                  ),
+                  maxLines: 4,
+                ),
+                SizedBox(
+                  height: configSize(context).height * 0.018,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Get.back();
+                  },
+                  child: Container(
+                    alignment: Alignment.center,
+                    height: configSize(context).height * 0.09,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Color(0xff33ce85),
+                      borderRadius: BorderRadius.circular(10.0),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.shade400,
+                          offset: Offset(0, 2),
+                          blurRadius: 10.0,
+                        ),
+                      ],
+                    ),
+                    child: Text(
+                      'Send',
+                      style: TextStyle(
+                        fontSize: configSize(context).height * 0.026,
+                        fontFamily: 'SF-Pro-Display',
+                        color: Color(0xffffffff),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

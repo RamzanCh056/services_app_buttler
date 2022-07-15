@@ -10,6 +10,8 @@ import 'package:service_app/i%20am_cleaner/My_Order_screens/My_order_main.dart';
 import 'package:service_app/i%20am_cleaner/Notification.dart';
 import 'package:service_app/i%20am_cleaner/ProfileScreen.dart';
 
+import '../../looking for cleaner _screns/SettingsScreen.dart';
+
 const TextStyle _textStyle = TextStyle(
   fontSize: 38,
   fontWeight: FontWeight.bold,
@@ -41,7 +43,7 @@ class _MaterialYouState extends State<MaterialYou> {
     MyOrderMain(),
     SecondTaskScreen(),
     Notifications(),
-    ProfileScreen(),
+    SettingsScreen(),
   ];
   @override
   Widget build(BuildContext context) {

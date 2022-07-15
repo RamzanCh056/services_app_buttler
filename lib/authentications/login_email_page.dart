@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:get/instance_manager.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:service_app/Navigation_bar/navigation_bar.dart';
+import 'package:service_app/authentications/create_account_screen.dart';
 import 'package:service_app/authentications/phone_number.dart';
 import 'package:service_app/authentications/signup.dart';
 
@@ -180,7 +182,7 @@ class _login_emailState extends State<login_email> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Get.to(signup());
+                        Get.to(CreateAccountScreen());
                       },
                       child: Text(
                         "Sign up!",
@@ -208,7 +210,7 @@ class _login_emailState extends State<login_email> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                       onPressed: () async {
-                        Get.to(Phone_number());
+                        Get.to(MainBottomClass());
                       },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,

@@ -36,7 +36,7 @@ class _CompleteTabState extends State<CompleteTab> {
                                   topLeft: Radius.circular(12)),
                             ),
                             onPressed: () {
-                              Get.to(HomePage());
+                              // Get.to(HomePage());
                             },
                             child: Text(
                               'Complete',

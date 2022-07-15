@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:service_app/h_screens/page22.dart';
+
+import 'package:service_app/looking%20for%20cleaner%20_screns/SettingsScreen.dart';
+
+import 'package:service_app/looking%20for%20cleaner%20_screns/page22.dart';
+
 import 'package:service_app/looking%20for%20cleaner%20_screns/page_15_myorder/page_15my_order.dart';
 import 'package:service_app/screens/get_cleaner.dart';
 
@@ -16,10 +20,11 @@ class _MainBottomClassState extends State<MainBottomClass> {
 
   //list of widgets to call ontap
   final widgetOptions = [
-    new get_clear(),
-    new page15(),
-    new page22(),
-    new Container(),
+    const get_clear(),
+    page15(),
+    // MyHomeScreen(),
+    const page22(),
+    SettingsScreen(),
   ];
 
   void onItemTapped(int index) {

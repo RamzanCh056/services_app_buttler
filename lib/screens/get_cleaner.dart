@@ -30,7 +30,7 @@ class _get_clearState extends State<get_clear> {
           child: Column(
             children: [
               SizedBox(
-                height: 20,
+                height: 10,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -84,6 +84,8 @@ class _get_clearState extends State<get_clear> {
                           filled: true,
                           prefixIcon: Icon(
                             Icons.search,
+                            size: 30,
+                            color: Colors.green,
                           ),
                           hintStyle: TextStyle(color: Colors.grey),
                           border: OutlineInputBorder(),
@@ -160,14 +162,14 @@ class _get_clearState extends State<get_clear> {
                                   "Preston Rd, inglewood",
                                   style: TextStyle(
                                       color: Colors.black38,
-                                      fontSize: 14,
+                                      fontSize: 12,
                                       fontWeight: FontWeight.bold),
                                 ),
                               ],
                             ),
                             trailing: Container(
                               height: 40,
-                              width: 110,
+                              width: 90,
                               child: Card(
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(17)),
@@ -177,7 +179,7 @@ class _get_clearState extends State<get_clear> {
                                     "To be cleared",
                                     style: TextStyle(
                                         color: Colors.white,
-                                        fontSize: 14,
+                                        fontSize: 12,
                                         fontWeight: FontWeight.w500),
                                   ),
                                 ),
@@ -258,13 +260,18 @@ class _get_clearState extends State<get_clear> {
                                   height: 10,
                                 ),
                                 Container(
-                                    alignment: Alignment.topCenter,
-                                    child: LinearProgressIndicator(
-                                      backgroundColor: Colors.grey,
-                                      value: 0.5,
-                                      valueColor:
-                                          new AlwaysStoppedAnimation<Color>(
-                                              Colors.green),
+                                    height: 7,
+                                    child: ClipRRect(
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(10)),
+                                      child: LinearProgressIndicator(
+                                        backgroundColor:
+                                            Colors.grey.withOpacity(0.1),
+                                        value: 0.5,
+                                        valueColor:
+                                            new AlwaysStoppedAnimation<Color>(
+                                                Colors.green),
+                                      ),
                                     ))
                               ],
                             ),
@@ -312,20 +319,25 @@ class _get_clearState extends State<get_clear> {
                               ),
                             ],
                           ),
-                          Row(
-                            children: [
-                              SizedBox(
-                                width: 12,
-                              ),
-                              Text(
-                                'Create order',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w500,
-                                    decoration: TextDecoration.underline),
-                              ),
-                            ],
+                          GestureDetector(
+                            onTap: () {
+                              Get.to(CreateNeworder());
+                            },
+                            child: Row(
+                              children: [
+                                SizedBox(
+                                  width: 12,
+                                ),
+                                Text(
+                                  'Create order',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w500,
+                                      decoration: TextDecoration.underline),
+                                ),
+                              ],
+                            ),
                           ),
                           SizedBox(
                             height: 25,
@@ -359,7 +371,9 @@ class _get_clearState extends State<get_clear> {
                     ),
                     children: [
                       InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          // Get.to(CreateNeworder());
+                        },
                         child: Card(
                           color: HexColor("#F4F4F4"),
                           elevation: 2,
@@ -388,7 +402,9 @@ class _get_clearState extends State<get_clear> {
                         ),
                       ),
                       InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          // Get.to(CreateNeworder());
+                        },
                         child: Card(
                           color: HexColor("#F4F4F4"),
                           elevation: 2,
@@ -417,7 +433,9 @@ class _get_clearState extends State<get_clear> {
                         ),
                       ),
                       InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          // Get.to(CreateNeworder());
+                        },
                         child: Card(
                           color: HexColor("#F4F4F4"),
                           elevation: 2,
@@ -446,7 +464,9 @@ class _get_clearState extends State<get_clear> {
                         ),
                       ),
                       InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          // Get.to(CreateNeworder());
+                        },
                         child: Card(
                           color: HexColor("#F4F4F4"),
                           elevation: 2,
@@ -475,7 +495,9 @@ class _get_clearState extends State<get_clear> {
                         ),
                       ),
                       InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          //  Get.to(CreateNeworder());
+                        },
                         child: Card(
                           color: HexColor("#F4F4F4"),
                           elevation: 2,
@@ -505,7 +527,7 @@ class _get_clearState extends State<get_clear> {
                       ),
                       InkWell(
                         onTap: () {
-                          Get.to(CreateNeworder());
+                          // Get.to(CreateNeworder());
                         },
                         child: Card(
                           color: HexColor("#F4F4F4"),

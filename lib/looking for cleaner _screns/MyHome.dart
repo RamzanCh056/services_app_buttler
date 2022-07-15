@@ -205,7 +205,7 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                                     borderRadius: BorderRadius.circular(10),
                                   ),
                                   onPressed: () async {
-                                    Get.to(PaymentScreen());
+                                    //  Get.to(PaymentScreen());
                                   },
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,

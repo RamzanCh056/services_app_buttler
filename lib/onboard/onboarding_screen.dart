@@ -18,19 +18,19 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       "title": "Find a professional in\n fast and easy way!",
       "subtitle":
           "Lorem ipsum dolor sit amet, consetetur sadipscing\n elitr, sed diam nonumy eirmod tempo Lorem ipsum\n dolor sit amet, consetetur sadipscing litr,",
-      "image": "assets/images/onboardingone.png",
+      "image": "assets/images/Group 25461.png",
     },
     {
       "title": "Always be safe with\n our insurance",
       "subtitle":
           "Lorem ipsum dolor sit amet, consetetur sadipscing\n elitr, sed diam nonumy eirmod tempo Lorem ipsum\n dolor sit amet, consetetur sadipscing litr",
-      "image": "assets/images/house-png.png"
+      "image": "assets/images/Group 25460.png"
     },
     {
       "title": "Choose the best jobs\n based on your plans",
       "subtitle":
           "Lorem ipsum dolor sit amet, consetetur sadipscing\n elitr, sed diam nonumy eirmod tempo Lorem ipsum\n dolor sit amet, consetetur sadipscing litr",
-      "image": "assets/images/third.png"
+      "image": "assets/images/Group 25458.png"
     },
   ];
 
@@ -43,9 +43,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         ),
         color: const Color(0xFF293241),
       ),
-      margin: const EdgeInsets.only(right: 5),
+      margin: const EdgeInsets.only(right: 7),
       height: 10,
-      curve: Curves.easeIn,
+      curve: Curves.fastOutSlowIn,
+      //Curves.easeIn,
       width: _currentPage == index ? 20 : 10,
     );
   }
@@ -53,55 +54,94 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: HexColor("#EEEEEE"),
       body: SafeArea(
         child: Column(
           children: <Widget>[
+            // Stack(
+            //   children: [
+            //     Positioned(
+            //         child: Container(
+            //       height: 10,
+            //       width: 30,
+            //       color: Colors.black,
+            //     ))
+            //   ],
+            // ),
             Expanded(
               flex: 3,
               child: PageView.builder(
                 controller: _controller,
                 itemCount: splashData.length,
                 itemBuilder: (BuildContext context, int index) {
-                  return Column(
+                  return Stack(
                     children: <Widget>[
                       // Padding(
                       //   padding: const EdgeInsets.only(top: 20.0),
                       //   child: Image.asset('assets/images/logo.png'),
                       // ),
-                      Spacer(flex: 10),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 15.0),
-                        child: Text(
-                          splashData[index]['title']!.toUpperCase(),
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.w800,
-                            color: const Color(0xFF424242),
+                      // Spacer(flex: 10),
+                      Positioned(
+                        // top: 60,
+                        // left: 95,
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 60),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                splashData[index]['title']!.toUpperCase(),
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: 19,
+                                  fontWeight: FontWeight.w800,
+                                  color: const Color(0xFF424242),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
-                      Text(
-                        splashData[index]['subtitle']!,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.grey[600],
-                          height: 1.5,
+                      Positioned(
+                        top: 110,
+                        left: 60,
+                        child: Text(
+                          splashData[index]['subtitle']!,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Colors.grey[600],
+                            height: 1.5,
+                          ),
                         ),
                       ),
-                      Spacer(
-                        flex: 2,
+
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          // Container(
+                          //   width: double.infinity,
+                          //   height: double.infinity,
+                          //   decoration: BoxDecoration(
+                          //     image: DecorationImage(
+                          //         image:
+                          //             AssetImage(splashData[index]["image"]!),
+                          //         fit: BoxFit.cover),
+                          //   ),
+                          // )
+                          AspectRatio(
+                            aspectRatio: 5.9 / 9,
+                            // aspectRatio: 6 / 6,
+                            child: Image.asset(
+                              splashData[index]['image']!,
+                              height: double.infinity,
+                              //width: 300,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ],
                       ),
-                      AspectRatio(
-                        aspectRatio: 12 / 10,
-                        child: Image.asset(
-                          splashData[index]['image']!,
-                          height: 100,
-                          fit: BoxFit.contain,
-                        ),
-                      ),
-                      Spacer(),
+                      // Spacer(),
                     ],
                   );
                 },
@@ -114,20 +154,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   Padding(
-                    padding: const EdgeInsets.only(top: 40.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: List.generate(
-                        splashData.length,
-                        (int index) => _buildDots(index: index),
-                      ),
-                    ),
-                  ),
-                  Spacer(),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 50.0),
                     child: SizedBox(
-                      height: 45,
+                      height: 55,
                       width: MediaQuery.of(context).size.width,
                       child: FlatButton(
                         onPressed: () {
@@ -162,7 +191,18 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       ),
                     ),
                   ),
-                  Spacer(),
+                  //   Spacer(),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 30.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: List.generate(
+                        splashData.length,
+                        (int index) => _buildDots(index: index),
+                      ),
+                    ),
+                  ),
+                  // Spacer(),
                 ],
               ),
             ),

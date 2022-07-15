@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:service_app/looking%20for%20cleaner%20_screns/my_home_aditional.dart';
 
 class TabScreen_One extends StatelessWidget {
   @override
@@ -26,12 +29,17 @@ class TabScreen_One extends StatelessWidget {
                                 radius: 25,
                                 backgroundImage:
                                     AssetImage("images/pexels.png")),
-                            title: Text(
-                              "My Home",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold),
+                            title: GestureDetector(
+                              onTap: () {
+                                Get.to(MyhomeAditional());
+                              },
+                              child: const Text(
+                                "My Home",
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold),
+                              ),
                             ),
                             subtitle: Row(
                               children: [
@@ -44,7 +52,7 @@ class TabScreen_One extends StatelessWidget {
                                   "Preston Rd, inglewood",
                                   style: TextStyle(
                                     color: Colors.black87,
-                                    fontSize: 14,
+                                    fontSize: 12,
                                   ),
                                 ),
                               ],
@@ -208,7 +216,7 @@ class TabScreen_One extends StatelessWidget {
                             children: [
                               Container(
                                 height: 50,
-                                width: 160,
+                                // width: 130,
                                 child: Card(
                                     shape: RoundedRectangleBorder(
                                         borderRadius:
@@ -225,7 +233,7 @@ class TabScreen_One extends StatelessWidget {
                                             height: 30,
                                           ),
                                           Text(
-                                            'Floor cleaning',
+                                            'Floor cleaning  ',
                                             style: TextStyle(
                                                 color: Colors.black87,
                                                 fontSize: 15,
@@ -237,7 +245,7 @@ class TabScreen_One extends StatelessWidget {
                               ),
                               Container(
                                 height: 50,
-                                width: 160,
+                                //  width: 130,
                                 child: Card(
                                     shape: RoundedRectangleBorder(
                                         borderRadius:
@@ -254,7 +262,7 @@ class TabScreen_One extends StatelessWidget {
                                             height: 30,
                                           ),
                                           Text(
-                                            'Washing clothes',
+                                            'Washing clothes  ',
                                             style: TextStyle(
                                                 color: Colors.black87,
                                                 fontSize: 15,
@@ -331,7 +339,7 @@ class TabScreen_One extends StatelessWidget {
                                   "Preston Rd, inglewood",
                                   style: TextStyle(
                                     color: Colors.black87,
-                                    fontSize: 14,
+                                    fontSize: 12,
                                   ),
                                 ),
                               ],
@@ -495,7 +503,7 @@ class TabScreen_One extends StatelessWidget {
                             children: [
                               Container(
                                 height: 50,
-                                width: 160,
+                                // width: 130,
                                 child: Card(
                                     shape: RoundedRectangleBorder(
                                         borderRadius:
@@ -512,7 +520,7 @@ class TabScreen_One extends StatelessWidget {
                                             height: 30,
                                           ),
                                           Text(
-                                            'Floor cleaning',
+                                            'Floor cleaning  ',
                                             style: TextStyle(
                                                 color: Colors.black87,
                                                 fontSize: 15,
@@ -524,7 +532,7 @@ class TabScreen_One extends StatelessWidget {
                               ),
                               Container(
                                 height: 50,
-                                width: 160,
+                                //  width: 130,
                                 child: Card(
                                     shape: RoundedRectangleBorder(
                                         borderRadius:
@@ -541,7 +549,7 @@ class TabScreen_One extends StatelessWidget {
                                             height: 30,
                                           ),
                                           Text(
-                                            'Washing clothes',
+                                            'Washing clothes  ',
                                             style: TextStyle(
                                                 color: Colors.black87,
                                                 fontSize: 15,

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
+import 'package:service_app/i%20am_cleaner/Profile_Identification.dart';
+
 import 'package:service_app/screens/building_Details.dart';
 
 class Page6 extends StatefulWidget {
@@ -57,67 +59,75 @@ class _Page6State extends State<Page6> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => BuildingDetails()));
+                          builder: (context) => ProfileIdentification()));
                 },
                 child: Stack(
                   children: [
-                    Container(
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12),
-                          color: Color(0xff33CE85)),
-                      child: Column(
-                        children: [
-                          SizedBox(
-                            height: 45,
-                          ),
-                          Row(
-                            children: [
-                              SizedBox(
-                                width: 12,
-                              ),
-                              Text(
-                                'I\'m a Cleaner',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(
-                                    left: 12, right: 12, top: 8, bottom: 10),
-                                child: Text(
-                                  'Lorem Ipsum dolar sit amet,\n Lorem Ipsum dolar sit amet.',
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ProfileIdentification()));
+                      },
+                      child: Container(
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            color: Color(0xff33CE85)),
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              height: 45,
+                            ),
+                            Row(
+                              children: [
+                                SizedBox(
+                                  width: 12,
+                                ),
+                                Text(
+                                  'I\'m a Cleaner',
                                   style: TextStyle(
-                                    color: Colors.white54,
+                                      color: Colors.white,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      left: 12, right: 12, top: 8, bottom: 10),
+                                  child: Text(
+                                    'Lorem Ipsum dolar sit amet,\n Lorem Ipsum dolar sit amet.',
+                                    style: TextStyle(
+                                      color: Colors.white54,
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              SizedBox(
-                                width: 12,
-                              ),
-                              Text(
-                                'Continue',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w500,
-                                    decoration: TextDecoration.underline),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 45,
-                          ),
-                        ],
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                SizedBox(
+                                  width: 12,
+                                ),
+                                Text(
+                                  'Continue',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w500,
+                                      decoration: TextDecoration.underline),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 45,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     Positioned(
@@ -133,75 +143,91 @@ class _Page6State extends State<Page6> {
               SizedBox(
                 height: 50,
               ),
-              Stack(
-                children: [
-                  Container(
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color: Colors.black),
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          height: 35,
-                        ),
-                        Row(
-                          children: [
-                            SizedBox(
-                              width: 12,
-                            ),
-                            Text(
-                              'I\'m looking for a \nCleaner',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 12, right: 12, top: 8, bottom: 10),
-                              child: Text(
-                                'Lorem Ipsum dolar sit amet,\n Lorem Ipsum dolar sit amet.',
-                                style: TextStyle(
-                                  color: Colors.white54,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            SizedBox(
-                              width: 12,
-                            ),
-                            Text(
-                              'Continue',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w500,
-                                  decoration: TextDecoration.underline),
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 45,
-                        ),
-                      ],
-                    ),
-                  ),
-                  Positioned(
-                      top: -14,
-                      // left: 0,
-                      right: -50,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => BuildingDetails()));
+                },
+                child: Stack(
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => BuildingDetails()));
+                      },
                       child: Container(
-                        child: Image.asset('images/pngwing.com (27.png'),
-                      ))
-                ],
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            color: Colors.black),
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              height: 35,
+                            ),
+                            Row(
+                              children: [
+                                SizedBox(
+                                  width: 12,
+                                ),
+                                Text(
+                                  'I\'m looking for a \nCleaner',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      left: 12, right: 12, top: 8, bottom: 10),
+                                  child: Text(
+                                    'Lorem Ipsum dolar sit amet,\n Lorem Ipsum dolar sit amet.',
+                                    style: TextStyle(
+                                      color: Colors.white54,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                SizedBox(
+                                  width: 12,
+                                ),
+                                Text(
+                                  'Continue',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w500,
+                                      decoration: TextDecoration.underline),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 45,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                        top: -14,
+                        // left: 0,
+                        right: -50,
+                        child: Container(
+                          child: Image.asset('images/pngwing.com (27.png'),
+                        ))
+                  ],
+                ),
               ),
             ],
           ),

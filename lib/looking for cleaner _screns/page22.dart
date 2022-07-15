@@ -154,12 +154,12 @@ class page22 extends StatelessWidget {
                             ],
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(top: 18.0),
+                            padding: const EdgeInsets.only(top: 12.0),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 MaterialButton(
-                                  minWidth: 150,
+                                  minWidth: 130,
                                   height: 45,
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(8.0),
@@ -174,7 +174,7 @@ class page22 extends StatelessWidget {
                                 ),
                                 // SizedBox(width: 10,),
                                 MaterialButton(
-                                  minWidth: 150,
+                                  minWidth: 130,
                                   height: 45,
                                   color: Colors.green.shade800,
                                   shape: RoundedRectangleBorder(
@@ -182,7 +182,9 @@ class page22 extends StatelessWidget {
                                       side: BorderSide(
                                         color: Colors.green.shade800,
                                       )),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    //Get.to(MyHomeAplly());
+                                  },
                                   child: Text("Approve",
                                       style: TextStyle(
                                         color: Colors.white,
@@ -292,12 +294,12 @@ class page22 extends StatelessWidget {
                             ],
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(top: 18.0),
+                            padding: const EdgeInsets.only(top: 12.0),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 MaterialButton(
-                                  minWidth: 150,
+                                  minWidth: 130,
                                   height: 45,
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(8.0),
@@ -312,7 +314,7 @@ class page22 extends StatelessWidget {
                                 ),
                                 // SizedBox(width: 10,),
                                 MaterialButton(
-                                  minWidth: 150,
+                                  minWidth: 130,
                                   height: 45,
                                   color: Colors.green.shade800,
                                   shape: RoundedRectangleBorder(
@@ -320,7 +322,9 @@ class page22 extends StatelessWidget {
                                       side: BorderSide(
                                         color: Colors.green.shade800,
                                       )),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    // Get.to(MyHomeAplly());
+                                  },
                                   child: Text("Approve",
                                       style: TextStyle(
                                         color: Colors.white,

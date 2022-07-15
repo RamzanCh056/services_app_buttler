@@ -2,10 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:service_app/looking%20for%20cleaner%20_screns/MyHome.dart';
 
-import 'package:service_app/h_screens/page22.dart';
-
-import 'package:service_app/h_screens/page33.dart';
 import 'package:service_app/looking%20for%20cleaner%20_screns/page_15_myorder/page_15my_order.dart';
 import 'package:service_app/widgets/back_arrow.dart';
 import 'package:service_app/widgets/calender.dart';
@@ -13,6 +11,7 @@ import 'package:service_app/widgets/colors.dart';
 import 'package:service_app/widgets/constant.dart';
 import 'package:service_app/widgets/flutter_time_picker.dart';
 
+import '../looking for cleaner _screns/payment_screen.dart';
 import '../widgets/create_order_button.dart';
 import '../widgets/create_order_text_field.dart';
 
@@ -39,7 +38,7 @@ class CreateOrderScreen extends StatelessWidget {
                     SizedBox(
                       height: sizeConfiq(context).height * 0.03,
                     ),
-                    BackArrowButton(imgsrc: 'assets/icons/Icon ionic-ios.png'),
+                    //  BackArrowButton(imgsrc: 'assets/icons/Icon ionic-ios.png'),
                     SizedBox(
                       height: sizeConfiq(context).height * 0.021,
                     ),
@@ -171,7 +170,7 @@ class CreateOrderScreen extends StatelessWidget {
                           ),
                           GestureDetector(
                             onTap: () {
-                              Get.to(page15());
+                              Get.to(PaymentScreen());
                             },
                             child: CreateOrderButton(
                               title: 'Continue',

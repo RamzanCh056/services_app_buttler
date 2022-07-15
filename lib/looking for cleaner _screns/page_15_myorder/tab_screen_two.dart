@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class TabScreen_Two extends StatelessWidget {
   @override
@@ -13,16 +14,14 @@ class TabScreen_Two extends StatelessWidget {
               child: Column(
                 children: [
                   Card(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12)),
-                    child: Padding(
-                      padding: const EdgeInsets.all(20.0),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12)),
                       child: Column(
                         children: [
                           MaterialButton(
                             minWidth: double.infinity,
-                            height: 45,
-                            color: Colors.green,
+                            height: 50,
+                            color: HexColor("#005167"),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.only(
                                   topRight: Radius.circular(12),
@@ -30,374 +29,328 @@ class TabScreen_Two extends StatelessWidget {
                             ),
                             onPressed: () {},
                             child: Text(
-                              'Completed',
+                              'Get started',
                               style: TextStyle(color: Colors.white),
                             ),
                           ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Column(
-                                children: [
-                                  CircleAvatar(
-                                    radius: 30,
-                                    backgroundColor: Colors.brown,
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                width: 9,
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'My Home',
+                          Padding(
+                            padding: const EdgeInsets.all(18.0),
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                ListTile(
+                                  leading: CircleAvatar(
+                                      backgroundColor: Colors.transparent,
+                                      radius: 25,
+                                      backgroundImage:
+                                          AssetImage("images/pexels.png")),
+                                  title: Text(
+                                    "My Home",
                                     style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                    ),
+                                        color: Colors.black,
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold),
                                   ),
-                                  Row(
+                                  subtitle: Row(
                                     children: [
-                                      Icon(Icons.person),
+                                      Icon(
+                                        Icons.location_on_outlined,
+                                        size: 18,
+                                        color: Colors.black87,
+                                      ),
                                       Text(
-                                        'preston Rd,Inglewood',
+                                        "Preston Rd, inglewood",
                                         style: TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.normal,
+                                          color: Colors.black87,
+                                          fontSize: 14,
                                         ),
                                       ),
                                     ],
-                                  )
-                                ],
-                              ),
-                              SizedBox(
-                                width: 5,
-                              ),
-                              Column(
-                                children: [
-                                  Text(
-                                    '255',
+                                  ),
+                                  trailing: Text(
+                                    "\$255",
                                     style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
+                                        color: Colors.black,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 18.0),
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.grey.shade200,
+                                      borderRadius: BorderRadius.circular(5),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(
+                                          top: 8.0,
+                                          left: 38,
+                                          right: 38,
+                                          bottom: 8),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Icon(Icons.date_range_outlined),
+                                          Text('22May'),
+                                          SizedBox(
+                                            width: 4,
+                                          ),
+                                          Icon(Icons.timelapse),
+                                          SizedBox(
+                                            width: 4,
+                                          ),
+                                          Text('10:30-11:30pm'),
+                                        ],
+                                      ),
                                     ),
                                   ),
-                                ],
-                              )
-                            ],
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 18.0),
-                            child: Container(
-                              decoration: BoxDecoration(
-                                color: Colors.grey.shade200,
-                                borderRadius: BorderRadius.circular(5),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.only(
-                                    top: 8.0, left: 38, right: 38, bottom: 8),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Icon(Icons.person),
-                                    Text('22May'),
-                                    Icon(Icons.person),
-                                    Text('10:30-11:30pm'),
-                                  ],
                                 ),
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 18.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Column(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Icon(
-                                          Icons.person,
-                                          size: 30,
-                                        ),
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              '23',
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.bold,
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 18.0),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Column(
+                                        children: [
+                                          Row(
+                                            children: [
+                                              Column(
+                                                children: [
+                                                  Image.asset(
+                                                    "images/buildone.png",
+                                                    height: 23,
+                                                  ),
+                                                ],
                                               ),
+                                              SizedBox(
+                                                width: 5,
+                                              ),
+                                              Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  Text(
+                                                    '23',
+                                                    style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                  Text(
+                                                    'building size',
+                                                    style:
+                                                        TextStyle(fontSize: 13),
+                                                  ),
+                                                ],
+                                              )
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                      Column(
+                                        children: [
+                                          Row(
+                                            children: [
+                                              Column(
+                                                children: [
+                                                  Image.asset(
+                                                    "images/bathone.png",
+                                                    height: 23,
+                                                  ),
+                                                ],
+                                              ),
+                                              SizedBox(
+                                                width: 5,
+                                              ),
+                                              Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  Text(
+                                                    '8',
+                                                    style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                  Text(
+                                                    'Bathroom',
+                                                    style:
+                                                        TextStyle(fontSize: 13),
+                                                  ),
+                                                ],
+                                              )
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                      Column(
+                                        children: [
+                                          Row(
+                                            children: [
+                                              Column(
+                                                children: [
+                                                  Image.asset(
+                                                    "images/bathtwo.png",
+                                                    height: 23,
+                                                  ),
+                                                ],
+                                              ),
+                                              SizedBox(
+                                                width: 5,
+                                              ),
+                                              Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  Text(
+                                                    '4',
+                                                    style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                  Text(
+                                                    'Bathroom',
+                                                    style:
+                                                        TextStyle(fontSize: 13),
+                                                  ),
+                                                ],
+                                              )
+                                            ],
+                                          ),
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 15,
+                                ),
+                                Row(
+                                  children: [
+                                    Container(
+                                      height: 50,
+                                      // width: 130,
+                                      child: Card(
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(32)),
+                                          color: HexColor("#F4F4F4"),
+                                          elevation: 2,
+                                          child: Center(
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Image.asset(
+                                                  "images/order.png",
+                                                  height: 30,
+                                                ),
+                                                Text(
+                                                  'Floor cleaning  ',
+                                                  style: TextStyle(
+                                                      color: Colors.black87,
+                                                      fontSize: 15,
+                                                      fontWeight:
+                                                          FontWeight.w400),
+                                                ),
+                                              ],
                                             ),
-                                            Text('building'),
-                                          ],
-                                        )
-                                      ],
+                                          )),
+                                    ),
+                                    Container(
+                                      height: 50,
+                                      //  width: 130,
+                                      child: Card(
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(32)),
+                                          color: HexColor("#F4F4F4"),
+                                          elevation: 2,
+                                          child: Center(
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Image.asset(
+                                                  "images/waching.png",
+                                                  height: 30,
+                                                ),
+                                                Text(
+                                                  'Washing clothes  ',
+                                                  style: TextStyle(
+                                                      color: Colors.black87,
+                                                      fontSize: 15,
+                                                      fontWeight:
+                                                          FontWeight.w400),
+                                                ),
+                                              ],
+                                            ),
+                                          )),
                                     ),
                                   ],
                                 ),
-                                Column(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Icon(
-                                          Icons.person,
-                                          size: 30,
-                                        ),
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              '08',
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                            Text('Bathrooms'),
-                                          ],
-                                        )
-                                      ],
-                                    ),
-                                  ],
+                                SizedBox(
+                                  height: 10,
                                 ),
-                                Column(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Icon(
-                                          Icons.person,
-                                          size: 30,
-                                        ),
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              '04',
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                            Text('Bathrooms'),
-                                          ],
-                                        )
-                                      ],
+                                ListTile(
+                                  leading: CircleAvatar(
+                                    radius: 20,
+                                    backgroundColor: Colors.white,
+                                    backgroundImage:
+                                        AssetImage("images/notification.png"),
+                                  ),
+                                  title: Text(
+                                    '1 application',
+                                    style: TextStyle(
+                                        color: Colors.black87,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                  trailing: Text(
+                                    'View Profile',
+                                    style: TextStyle(
+                                        color: Colors.black54,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                MaterialButton(
+                                  minWidth: double.infinity,
+                                  height: 55,
+                                  color: HexColor("#33ce85"),
+                                  shape: RoundedRectangleBorder(
+                                    side: BorderSide(
+                                      color: HexColor("#33ce85"),
                                     ),
-                                  ],
-                                )
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  onPressed: () {},
+                                  child: Text(
+                                    'Approved',
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                ),
                               ],
                             ),
                           ),
-                          SizedBox(
-                            height: 15,
-                          ),
-                          Row(
-                            children: [
-                              MaterialButton(
-                                // minWidth:120,
-                                height: 45,
-                                color: Colors.grey.shade200,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(18.0),
-                                ),
-                                onPressed: () {},
-                                child: Row(
-                                  children: [
-                                    Icon(
-                                      Icons.person,
-                                      size: 20,
-                                    ),
-                                    SizedBox(
-                                      width: 5,
-                                    ),
-                                    Text("Floor cleaning",
-                                        style: TextStyle(fontSize: 12)),
-                                  ],
-                                ),
-                              ),
-                              SizedBox(
-                                width: 5,
-                              ),
-                              MaterialButton(
-                                minWidth: 120,
-                                height: 45,
-                                color: Colors.grey.shade200,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(18.0),
-                                ),
-                                onPressed: () {},
-                                child: Row(
-                                  children: [
-                                    Icon(
-                                      Icons.person,
-                                      size: 20,
-                                    ),
-                                    SizedBox(
-                                      width: 5,
-                                    ),
-                                    Text("washing clothes",
-                                        style: TextStyle(
-                                            color: Colors.black, fontSize: 12)),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(
-                                children: [
-                                  CircleAvatar(
-                                    radius: 30,
-                                    backgroundColor: Colors.brown,
-                                  ),
-                                  SizedBox(
-                                    width: 5,
-                                  ),
-                                  Text(
-                                    'Jenny Wilson',
-                                    style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Column(
-                                children: [
-                                  Text(
-                                    'View Profile',
-                                    style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.normal,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
                         ],
-                      ),
-                    ),
-                  ),
-                  Card(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12)),
-                    child: Padding(
-                      padding:
-                          const EdgeInsets.only(top: 20.0, right: 20, left: 20),
-                      child: Column(
-                        children: [
-                          MaterialButton(
-                            minWidth: double.infinity,
-                            height: 45,
-                            color: Colors.green,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.only(
-                                  topRight: Radius.circular(12),
-                                  topLeft: Radius.circular(12)),
-                            ),
-                            onPressed: () {},
-                            child: Text(
-                              'Completed',
-                              style: TextStyle(color: Colors.white),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Column(
-                                children: [
-                                  CircleAvatar(
-                                    radius: 30,
-                                    backgroundColor: Colors.brown,
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                width: 9,
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'My Home',
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  Row(
-                                    children: [
-                                      Icon(Icons.person),
-                                      Text(
-                                        'preston Rd,Inglewood',
-                                        style: TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.normal,
-                                        ),
-                                      ),
-                                    ],
-                                  )
-                                ],
-                              ),
-                              SizedBox(
-                                width: 5,
-                              ),
-                              Column(
-                                children: [
-                                  Text(
-                                    '255',
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 18.0),
-                            child: Container(
-                              decoration: BoxDecoration(
-                                color: Colors.grey.shade200,
-                                borderRadius: BorderRadius.circular(5),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.only(
-                                    top: 8.0, left: 38, right: 38, bottom: 8),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Icon(Icons.person),
-                                    Text('22May'),
-                                    Icon(Icons.person),
-                                    Text('10:30-11:30pm'),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                      )),
+                  SizedBox(
+                    height: 7,
+                  )
                 ],
               ),
             ),

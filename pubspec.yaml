@@ -41,6 +41,11 @@ dependencies:
   flutter_clean_calendar: ^1.1.0
   table_calendar: ^3.0.6
   flutter_time_picker_spinner: ^2.0.0
+  barcode_widget: ^2.0.2
+  dots_indicator: ^2.1.0
+  intl: ^0.17.0
+
+
 
 dev_dependencies:
   flutter_test:

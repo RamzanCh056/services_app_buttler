@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:service_app/widgets/colors.dart';
 import 'package:service_app/widgets/constant.dart';
+
+import '../order_home_screen.dart';
 
 class ActiveTab extends StatefulWidget {
   const ActiveTab({Key? key}) : super(key: key);
@@ -34,12 +38,17 @@ class _ActiveTabState extends State<ActiveTab> {
                                 radius: 25,
                                 backgroundImage:
                                     AssetImage("images/pexels.png")),
-                            title: Text(
-                              "My Home",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold),
+                            title: GestureDetector(
+                              onTap: () {
+                                Get.to(HomePage());
+                              },
+                              child: const Text(
+                                "My Home",
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold),
+                              ),
                             ),
                             subtitle: Row(
                               children: [

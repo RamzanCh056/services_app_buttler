@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get_core/get_core.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
+import 'package:service_app/authentications/phone_number.dart';
 import 'package:service_app/widgets/colors.dart';
 import 'package:service_app/widgets/constant.dart';
 
@@ -154,6 +155,9 @@ class CreateAccountScreen extends StatelessWidget {
                                 CustomFormField(hinttxt: 'Full Password'),
                                 CustomFormField(hinttxt: 'Confirm Password'),
                                 GestureDetector(
+                                  onTap: () {
+                                    Get.to(Phone_number());
+                                  },
                                   child: Container(
                                     alignment: Alignment.center,
                                     width: double.infinity,
