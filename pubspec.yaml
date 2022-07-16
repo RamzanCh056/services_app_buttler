@@ -44,6 +44,8 @@ dependencies:
   barcode_widget: ^2.0.2
   dots_indicator: ^2.1.0
   intl: ^0.17.0
+  flutter_svg: ^0.19.2+1
+ 
 
 
 

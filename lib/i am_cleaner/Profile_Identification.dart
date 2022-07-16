@@ -74,15 +74,16 @@ class _ProfileIdentificationState extends State<ProfileIdentification> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       new Container(
-                          width: 120.0,
-                          height: 120.0,
-                          decoration: new BoxDecoration(
-                            shape: BoxShape.circle,
-                            image: new DecorationImage(
-                              image: new AssetImage('images/profile.png'),
-                              fit: BoxFit.cover,
-                            ),
-                          )),
+                        width: 120.0,
+                        height: 120.0,
+                        decoration: new BoxDecoration(
+                          shape: BoxShape.circle,
+                          image: new DecorationImage(
+                            image: new AssetImage('images/profile.png'),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                   Padding(

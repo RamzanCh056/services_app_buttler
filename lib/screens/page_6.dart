@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:service_app/i%20am_cleaner/Profile_Identification.dart';
-
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:service_app/screens/building_Details.dart';
 
 class Page6 extends StatefulWidget {
@@ -131,11 +131,11 @@ class _Page6State extends State<Page6> {
                       ),
                     ),
                     Positioned(
-                        top: -4,
-                        // left: 0,
-                        right: 10,
+                        top: -20,
+                        left: 70,
+                        // right: 110,
                         child: Container(
-                          child: Image.asset('images/123123454.png'),
+                          child: SvgPicture.asset('images/123123454.svg'),
                         ))
                   ],
                 ),
@@ -224,7 +224,7 @@ class _Page6State extends State<Page6> {
                         // left: 0,
                         right: -50,
                         child: Container(
-                          child: Image.asset('images/pngwing.com (27.png'),
+                          child: SvgPicture.asset('images/pngwing.com (27.svg'),
                         ))
                   ],
                 ),
