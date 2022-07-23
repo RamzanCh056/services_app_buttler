@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:service_app/i%20am_cleaner/order_home_screen.dart';
+
+import '../Bottom_sheets/bottomsheet1.dart';
 
 class CompleteTab extends StatefulWidget {
   const CompleteTab({Key? key}) : super(key: key);
@@ -11,6 +14,12 @@ class CompleteTab extends StatefulWidget {
 }
 
 class _CompleteTabState extends State<CompleteTab> {
+  int _selectedIndex=0;
+  void _onItemTapped(index){
+    setState(() {
+      _selectedIndex=index;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -91,7 +100,7 @@ class _CompleteTabState extends State<CompleteTab> {
                                   padding: const EdgeInsets.only(top: 18.0),
                                   child: Container(
                                     decoration: BoxDecoration(
-                                      color: Colors.grey.shade200,
+                                      color: Color(0xFFf7f7f7),
                                       borderRadius: BorderRadius.circular(5),
                                     ),
                                     child: Padding(
@@ -105,15 +114,18 @@ class _CompleteTabState extends State<CompleteTab> {
                                             MainAxisAlignment.center,
                                         children: [
                                           Icon(Icons.date_range_outlined),
+                                          SizedBox(width: 4,),
                                           Text('22May'),
                                           SizedBox(
-                                            width: 4,
+                                            width: 8,
                                           ),
                                           Icon(Icons.timelapse),
+
                                           SizedBox(
-                                            width: 4,
+                                            width: 8,
                                           ),
                                           Text('10:30-11:30pm'),
+
                                         ],
                                       ),
                                     ),
@@ -141,7 +153,7 @@ class _CompleteTabState extends State<CompleteTab> {
                                                 ],
                                               ),
                                               SizedBox(
-                                                width: 5,
+                                                width: 8,
                                               ),
                                               Column(
                                                 crossAxisAlignment:
@@ -178,14 +190,14 @@ class _CompleteTabState extends State<CompleteTab> {
                                                 ],
                                               ),
                                               SizedBox(
-                                                width: 5,
+                                                width: 8,
                                               ),
                                               Column(
                                                 crossAxisAlignment:
                                                     CrossAxisAlignment.start,
                                                 children: [
                                                   Text(
-                                                    '8',
+                                                    '08',
                                                     style: TextStyle(
                                                       fontWeight:
                                                           FontWeight.bold,
@@ -215,21 +227,21 @@ class _CompleteTabState extends State<CompleteTab> {
                                                 ],
                                               ),
                                               SizedBox(
-                                                width: 5,
+                                                width: 8,
                                               ),
                                               Column(
                                                 crossAxisAlignment:
                                                     CrossAxisAlignment.start,
                                                 children: [
                                                   Text(
-                                                    '4',
+                                                    '04',
                                                     style: TextStyle(
                                                       fontWeight:
                                                           FontWeight.bold,
                                                     ),
                                                   ),
                                                   Text(
-                                                    'Bathroom',
+                                                    'Bedroom',
                                                     style:
                                                         TextStyle(fontSize: 13),
                                                   ),
@@ -247,65 +259,69 @@ class _CompleteTabState extends State<CompleteTab> {
                                 ),
                                 Row(
                                   children: [
-                                    Container(
-                                      height: 50,
-                                      // width: 130,
-                                      child: Card(
-                                          shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(32)),
-                                          color: HexColor("#F4F4F4"),
-                                          elevation: 2,
-                                          child: Center(
-                                            child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                Image.asset(
-                                                  "images/order.png",
-                                                  height: 30,
-                                                ),
-                                                Text(
-                                                  'Floor cleaning  ',
-                                                  style: TextStyle(
-                                                      color: Colors.black87,
-                                                      fontSize: 15,
-                                                      fontWeight:
-                                                          FontWeight.w400),
-                                                ),
-                                              ],
+                                    GestureDetector(
+                                      onTap:(){},
+                                      child: Container(
+                                        height: 45,
+                                        //  width: 130,
+
+                                        decoration: BoxDecoration(
+                                          color:Color(0xFFf7f7f7),
+                                          borderRadius: BorderRadius.circular(32),
+                                        ),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                          children: [
+                                            SizedBox(width: 15),
+                                            SvgPicture.asset(
+                                              "assets/icons/floorcleaningsvg.svg",
+                                              height: 20,
                                             ),
-                                          )),
+                                            SizedBox(width: 10),
+                                            Text(
+                                              'Floor cleaning',
+                                              style: TextStyle(
+                                                  color: Colors.black87,
+                                                  fontSize: 13,
+                                                  fontWeight: FontWeight.w400),
+                                            ),
+                                            SizedBox(width: 15),
+                                          ],
+                                        ),
+                                      ),
                                     ),
-                                    Container(
-                                      height: 50,
-                                      //  width: 130,
-                                      child: Card(
-                                          shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(32)),
-                                          color: HexColor("#F4F4F4"),
-                                          elevation: 2,
-                                          child: Center(
-                                            child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                Image.asset(
-                                                  "images/waching.png",
-                                                  height: 30,
-                                                ),
-                                                Text(
-                                                  'Washing clothes  ',
-                                                  style: TextStyle(
-                                                      color: Colors.black87,
-                                                      fontSize: 15,
-                                                      fontWeight:
-                                                          FontWeight.w400),
-                                                ),
-                                              ],
+                                    GestureDetector(
+                                      onTap:(){},
+                                      child: Container(
+                                        height: 45,
+                                        //  width: 130,
+
+                                        decoration: BoxDecoration(
+                                          color:Color(0xFFf7f7f7),
+                                          borderRadius: BorderRadius.circular(32),
+                                        ),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                          children: [
+                                            SizedBox(width: 15),
+                                            SvgPicture.asset(
+                                              "assets/icons/washedclothes.svg",
+                                              height: 21,
                                             ),
-                                          )),
+                                            SizedBox(width: 10),
+                                            Text(
+                                              'Washing clothes  ',
+                                              style: TextStyle(
+                                                  color: Colors.black87,
+                                                  fontSize: 13,
+                                                  fontWeight: FontWeight.w400),
+                                            ),
+                                            SizedBox(width: 15),
+                                          ],
+                                        ),
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -365,6 +381,75 @@ class _CompleteTabState extends State<CompleteTab> {
               ),
             ),
           ),
-        ));
+        ), bottomNavigationBar: Container(
+      height: configSize(context).height * 0.09,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            offset: Offset(2, 0),
+            blurRadius: 0.5,
+            color: Colors.grey.shade400,
+          ),
+        ],
+      ),
+      child: BottomNavigationBar(
+        currentIndex: _selectedIndex,
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Color(0xFFffffff),
+        selectedItemColor: Colors.black,
+        onTap: _onItemTapped,
+        // elevation: 10,
+        unselectedLabelStyle: TextStyle(
+          fontSize: configSize(context).width * 0.033,
+          fontFamily: 'SF-Pro-Dis-Regular',
+          color: Color(0xff202020).withOpacity(0.01),
+        ),
+        unselectedIconTheme: IconThemeData(
+          size: configSize(context).width * 0.033,
+          color: Color(0xff202020).withOpacity(0.5),
+        ),
+        selectedLabelStyle: TextStyle(
+          fontSize: configSize(context).width * 0.033,
+          fontFamily: 'SF-Pro-Display',
+          color: Colors.black,
+        ),
+        selectedIconTheme: IconThemeData(
+          size: configSize(context).width * 0.036,
+          color: Colors.black,
+        ),
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: ImageIcon(
+              AssetImage('assets/icons/home.png'),
+              size: 22,
+            ),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: ImageIcon(
+              AssetImage('assets/icons/orders.png'),
+              size: 22,
+            ),
+            label: 'My orders',
+          ),
+
+          BottomNavigationBarItem(
+            icon: ImageIcon(
+              AssetImage('assets/icons/notifications.png'),
+              size: 22,
+            ),
+            label: 'Notifications',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.settings,
+              size: 22,
+            ),
+            label: 'Settings',
+          ),
+        ],
+      ),
+    ),);
   }
 }

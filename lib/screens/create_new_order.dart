@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:get/instance_manager.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -109,8 +110,8 @@ class _CreateNeworderState extends State<CreateNeworder> {
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Image.asset(
-                                        "images/order.png",
+                                      SvgPicture.asset(
+                                        "assets/icons/floorcleaningsvg.svg",
                                         height: 30,
                                       ),
                                       Text(
@@ -136,8 +137,8 @@ class _CreateNeworderState extends State<CreateNeworder> {
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Image.asset(
-                                        "images/waching.png",
+                                      SvgPicture.asset(
+                                        "assets/icons/washedclothes.svg",
                                         height: 30,
                                       ),
                                       Text(
@@ -163,8 +164,8 @@ class _CreateNeworderState extends State<CreateNeworder> {
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Image.asset(
-                                        "images/house.png",
+                                      SvgPicture.asset(
+                                        "assets/icons/cloth.svg",
                                         height: 30,
                                       ),
                                       Text(
@@ -201,8 +202,8 @@ class _CreateNeworderState extends State<CreateNeworder> {
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Image.asset(
-                                        "images/apliance.png",
+                                      SvgPicture.asset(
+                                        "assets/icons/washingmachinesvg.svg",
                                         height: 30,
                                       ),
                                       Text(
@@ -228,9 +229,9 @@ class _CreateNeworderState extends State<CreateNeworder> {
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Image.asset(
-                                        "images/washcloth.png",
-                                        height: 30,
+                                      SvgPicture.asset(
+                                        "assets/icons/window-cleaningsvg.svg",
+                                        height: 25,
                                       ),
                                       Text(
                                         'Window cleaning',
@@ -255,8 +256,8 @@ class _CreateNeworderState extends State<CreateNeworder> {
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Image.asset(
-                                        "images/lastclean.png",
+                                      SvgPicture.asset(
+                                        "assets/icons/housesvg.svg",
                                         height: 30,
                                       ),
                                       Text(

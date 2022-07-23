@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:get/instance_manager.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -29,7 +30,7 @@ class _login_emailState extends State<login_email> {
                 Container(
                   height: 100,
                   width: 140,
-                  child: Image(image: AssetImage('images/butler.png')),
+                  child: Image.asset('images/butler.png'),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),

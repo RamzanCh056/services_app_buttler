@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:service_app/widgets/colors.dart';
 import 'package:service_app/widgets/constant.dart';
 
@@ -60,6 +61,7 @@ class SettingsScreen extends StatelessWidget {
       'icon': Icons.lock_outlined,
     }
   ];
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -187,16 +189,13 @@ class SettingsScreen extends StatelessWidget {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Image.asset(
-                                    'assets/icons/Path 37.png',
-                                    color: Color(0xFF666666),
-                                  ),
+                                  Icon(Icons.location_on_outlined,
+                                      color: Color(0xFF666666),
+                                      size: sizeConfiq(context).width * 0.05),
                                   SizedBox(
                                     width: sizeConfiq(context).width * 0.01,
                                   ),
-                                  Image.asset(
-                                    'assets/images/Preston Rd. Ing.png',
-                                  ),
+                                 Text('Preston Rd. Inglewood',style: TextStyle(color: Color(0xFF666666)),),
                                 ],
                               ),
                               SizedBox(

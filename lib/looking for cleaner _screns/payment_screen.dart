@@ -2,6 +2,7 @@ import 'package:barcode_widget/barcode_widget.dart';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:service_app/looking%20for%20cleaner%20_screns/page_15_myorder/page_15my_order.dart';
@@ -147,14 +148,14 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     height: sizeConfiq(context).height * 0.02,
                   ),
                   PaymentCard(
-                      imgsrc1: 'assets/icons/applepay.png',
+                      imgsrc1: 'assets/icons/applesvg.svg',
                       imgsrc2: 'assets/icons/Icon ionic-md-m.png',
                       title: 'Apple pay'),
                   SizedBox(
                     height: sizeConfiq(context).height * 0.02,
                   ),
                   PaymentCard(
-                      imgsrc1: 'assets/icons/paypal_PNG2.png',
+                      imgsrc1: 'assets/icons/paypalsvg.svg',
                       imgsrc2: 'assets/icons/Icon ionic-md-m.png',
                       title: 'Paypal'),
                   SizedBox(
@@ -213,17 +214,21 @@ class _PaymentScreenState extends State<PaymentScreen> {
                               ),
                               Row(
                                 children: [
-                                  Image.asset('assets/icons/visa.png'),
+                                  Transform.translate(
+                                      offset: Offset(
+                                          sizeConfiq(context).width * 0.01, 0),
+                                      child: SvgPicture.asset(
+                                          'assets/icons/visasvg.svg')),
                                   SizedBox(
                                     width: sizeConfiq(context).width * 0.01,
                                   ),
-                                  Image.asset('assets/icons/creditcard.png'),
-                                  Image.asset(
-                                    'assets/icons/Icon ionic-md-m.png',
-                                    color: calenderColor,
-                                    width: sizeConfiq(context).width * 0.05,
-                                    height: sizeConfiq(context).height * 0.02,
+                                  SvgPicture.asset(
+                                    'assets/icons/visacircle.svg',
+                                    width: sizeConfiq(context).width * 0.15,
                                   ),
+                                  Icon(Icons.more_vert,
+                                      size: sizeConfiq(context).width * 0.07,
+                                      color: Color(0xFF000000)),
                                 ],
                               )
                             ],
@@ -282,7 +287,12 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                   ),
                                   color: Colors.grey.withOpacity(0.09),
                                 ),
-                                child: Image.asset('assets/icons/visa.png'),
+                                child: Padding(
+                                  padding:  EdgeInsets.all(sizeConfiq(context).width*0.02),
+                                  child: SvgPicture.asset(
+                                      'assets/icons/visasvg.svg',
+                                      ),
+                                ),
                               ),
                             ],
                           ),
@@ -471,19 +481,18 @@ class _PaymentCardState extends State<PaymentCard> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     widget.title.contains('Paypal')
-                        ? Image.asset(
+                        ? SvgPicture.asset(
                             widget.imgsrc1,
-                            width: sizeConfiq(context).width * 0.2,
+                            width: sizeConfiq(context).width * 0.18,
+                            color: Colors.deepPurple,
                           )
-                        : Image.asset(
+                        : SvgPicture.asset(
                             widget.imgsrc1,
+                            width: sizeConfiq(context).width * 0.13,
                           ),
-                    Image.asset(
-                      widget.imgsrc2,
-                      color: calenderColor,
-                      width: sizeConfiq(context).width * 0.05,
-                      height: sizeConfiq(context).height * 0.02,
-                    ),
+                    Icon(Icons.more_vert,
+                        size: sizeConfiq(context).width * 0.07,
+                        color: Color(0xFF000000)),
                   ],
                 ),
               ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:service_app/i%20am_cleaner/ProfileScreen.dart';
@@ -8,6 +9,7 @@ import 'package:service_app/widgets/constant.dart';
 
 import '../looking for cleaner _screns/page_15_myorder/Home_lets_find_job.dart';
 import 'Bottom_sheets/bottomsheet1.dart';
+import 'order_home_finish.dart';
 
 class MyHomeAplly extends StatefulWidget {
   const MyHomeAplly({Key? key}) : super(key: key);
@@ -25,175 +27,182 @@ class _MyHomeApllyState extends State<MyHomeAplly> {
         ),
       ),
       context: context,
-      builder: (context) => Container(
-        height: configSize(context).height * 0.56,
-        child: Container(
-          decoration: BoxDecoration(
-              color: Color(0xffffffff).withOpacity(0.1),
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(configSize(context).height * 0.048),
-                topRight: Radius.circular(configSize(context).height * 0.048),
-              )),
-          child: Padding(
-            padding: EdgeInsets.only(
-              left: configSize(context).height * 0.03,
-              right: configSize(context).height * 0.03,
-            ),
-            child: Column(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(
-                    top: configSize(context).height * 0.055,
-                    left: configSize(context).height * 0.04,
-                    right: configSize(context).height * 0.04,
-                  ),
-                  child: RichText(
-                    textAlign: TextAlign.center,
-                    text: TextSpan(
-                      children: [
-                        TextSpan(
-                          text: 'Order Is ',
-                          style: TextStyle(
-                            fontSize: configSize(context).height * 0.035,
-                            color: Colors.black,
-                            fontFamily: 'SF-Pro-Display',
-                          ),
-                        ),
-                        TextSpan(
-                          text: 'completed',
-                          style: TextStyle(
-                            fontSize: configSize(context).height * 0.035,
-                            color: Color(0xff33ce85),
-                            fontFamily: 'SF-Pro-Display',
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+      builder: (context) =>
+          Container(
+            height: configSize(context).height * 0.56,
+            child: Container(
+              decoration: BoxDecoration(
+                  color: Color(0xffffffff).withOpacity(0.1),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(
+                        configSize(context).height * 0.048),
+                    topRight: Radius.circular(
+                        configSize(context).height * 0.048),
+                  )),
+              child: Padding(
+                padding: EdgeInsets.only(
+                  left: configSize(context).height * 0.03,
+                  right: configSize(context).height * 0.03,
                 ),
-                SizedBox(
-                  height: configSize(context).height * 0.035,
-                ),
-                Container(
-                  height: configSize(context).height * 0.11,
-                  // width: ConfigSize(context).width * 0.8,
-                  decoration: BoxDecoration(
-                    color: Color(0xffffffff),
-                    borderRadius: BorderRadius.circular(20.0),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.shade400,
-                        offset: Offset(0, 0.2),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(
+                        top: configSize(context).height * 0.055,
+                        left: configSize(context).height * 0.04,
+                        right: configSize(context).height * 0.04,
                       ),
-                    ],
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: configSize(context).width * 0.05),
-                    child: Row(
-                      children: [
-                        Container(
-                          height: configSize(context).height * 0.08,
-                          width: configSize(context).width * 0.13,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage('assets/icons/profile.png'),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          width: configSize(context).width * 0.02,
-                        ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                      child: RichText(
+                        textAlign: TextAlign.center,
+                        text: TextSpan(
                           children: [
-                            Text(
-                              'John Doe',
+                            TextSpan(
+                              text: 'Order Is ',
                               style: TextStyle(
-                                fontSize: configSize(context).width * 0.038,
+                                fontSize: configSize(context).height * 0.035,
+                                color: Colors.black,
                                 fontFamily: 'SF-Pro-Display',
                               ),
                             ),
-                            Row(
+                            TextSpan(
+                              text: 'completed',
+                              style: TextStyle(
+                                fontSize: configSize(context).height * 0.035,
+                                color: Color(0xff33ce85),
+                                fontFamily: 'SF-Pro-Display',
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: configSize(context).height * 0.035,
+                    ),
+                    Container(
+                      height: configSize(context).height * 0.11,
+                      // width: ConfigSize(context).width * 0.8,
+                      decoration: BoxDecoration(
+                        color: Color(0xffffffff),
+                        borderRadius: BorderRadius.circular(20.0),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.shade400,
+                            offset: Offset(0, 0.2),
+                          ),
+                        ],
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(
+                            horizontal: configSize(context).width * 0.05),
+                        child: Row(
+                          children: [
+                            Container(
+                              height: configSize(context).height * 0.08,
+                              width: configSize(context).width * 0.13,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage('assets/icons/profile.png'),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              width: configSize(context).width * 0.02,
+                            ),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Image(
-                                  image: AssetImage('assets/icons/star.png'),
-                                  height: configSize(context).height * 0.036,
-                                  width: configSize(context).width * 0.036,
-                                ),
-                                SizedBox(
-                                  width: configSize(context).width * 0.01,
-                                ),
                                 Text(
-                                  '4.9',
+                                  'John Doe',
                                   style: TextStyle(
-                                    fontSize: configSize(context).width * 0.036,
-                                    fontFamily: 'SF-Pro-Dis-Regular',
-                                    color: Colors.black26,
+                                    fontSize: configSize(context).width * 0.038,
+                                    fontFamily: 'SF-Pro-Display',
                                   ),
-                                )
+                                ),
+                                Row(
+                                  children: [
+                                    Image(
+                                      image: AssetImage(
+                                          'assets/icons/star.png'),
+                                      height: configSize(context).height *
+                                          0.036,
+                                      width: configSize(context).width * 0.036,
+                                    ),
+                                    SizedBox(
+                                      width: configSize(context).width * 0.01,
+                                    ),
+                                    Text(
+                                      '4.9',
+                                      style: TextStyle(
+                                        fontSize: configSize(context).width *
+                                            0.036,
+                                        fontFamily: 'SF-Pro-Dis-Regular',
+                                        color: Colors.black26,
+                                      ),
+                                    )
+                                  ],
+                                ),
                               ],
                             ),
                           ],
                         ),
-                      ],
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(configSize(context).height * 0.027),
-                  child: Text(
-                    'Would you live to see Cleaner\'s calendar to book him for a recurring session?  ',
-                    style: TextStyle(
-                      fontSize: configSize(context).height * 0.026,
-                      fontFamily: 'SF-Pro-Dis-Regular',
-                    ),
-                  ),
-                ),
-                Container(
-                  alignment: Alignment.center,
-                  height: configSize(context).height * 0.093,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: Color(0xff33ce85),
-                    borderRadius: BorderRadius.circular(10.0),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.shade400,
-                        offset: Offset(0, 2),
-                        blurRadius: 10.0,
                       ),
-                    ],
-                  ),
-                  child: Text(
-                    'View calender',
-                    style: TextStyle(
-                      fontSize: configSize(context).height * 0.026,
-                      fontFamily: 'SF-Pro-Display',
-                      color: Color(0xffffffff),
                     ),
-                  ),
-                ),
-                SizedBox(
-                  height: configSize(context).height * 0.025,
-                ),
-                GestureDetector(
-                  onLongPress: () {},
-                  child: Text(
-                    'Skip for now',
-                    style: TextStyle(
-                      fontSize: configSize(context).width * 0.036,
-                      fontFamily: 'SF-Pro-Dis-Regular',
-                      color: Color(0xff202020).withOpacity(0.5),
+                    Padding(
+                      padding: EdgeInsets.all(
+                          configSize(context).height * 0.027),
+                      child: Text(
+                        'Would you live to see Cleaner\'s calendar to book him for a recurring session?  ',
+                        style: TextStyle(
+                          fontSize: configSize(context).height * 0.026,
+                          fontFamily: 'SF-Pro-Dis-Regular',
+                        ),
+                      ),
                     ),
-                  ),
+                    Container(
+                      alignment: Alignment.center,
+                      height: configSize(context).height * 0.093,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: Color(0xff33ce85),
+                        borderRadius: BorderRadius.circular(10.0),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.shade400,
+                            offset: Offset(0, 2),
+                            blurRadius: 10.0,
+                          ),
+                        ],
+                      ),
+                      child: Text(
+                        'View calender',
+                        style: TextStyle(
+                          fontSize: configSize(context).height * 0.026,
+                          fontFamily: 'SF-Pro-Display',
+                          color: Color(0xffffffff),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: configSize(context).height * 0.025,
+                    ),
+                    GestureDetector(
+                      onLongPress: () {},
+                      child: Text(
+                        'Skip for now',
+                        style: TextStyle(
+                          fontSize: configSize(context).width * 0.036,
+                          fontFamily: 'SF-Pro-Dis-Regular',
+                          color: Color(0xff202020).withOpacity(0.5),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-              ],
+              ),
             ),
           ),
-        ),
-      ),
     );
   }
 
@@ -204,7 +213,10 @@ class _MyHomeApllyState extends State<MyHomeAplly> {
         body: ListView(
           children: [
             Container(
-              height: MediaQuery.of(context).size.height,
+              height: MediaQuery
+                  .of(context)
+                  .size
+                  .height*1.1,
 
               //  height: sizeConfiq(context).height,
               child: Stack(
@@ -264,7 +276,7 @@ class _MyHomeApllyState extends State<MyHomeAplly> {
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize:
-                                          sizeConfiq(context).width * 0.07,
+                                      sizeConfiq(context).width * 0.06,
                                       color: white),
                                 ),
                                 Image(
@@ -276,22 +288,44 @@ class _MyHomeApllyState extends State<MyHomeAplly> {
                               ],
                             ),
                             Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Image.asset(
-                                  'assets/icons/Path 37.png',
-                                  color: white,
-                                ),
-                                SizedBox(
-                                  width: sizeConfiq(context).width * 0.01,
-                                ),
-                                Text(
-                                  'Preston Rd. Inglewood',
-                                  style: TextStyle(
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      'assets/icons/Path 37.png',
                                       color: white,
-                                      fontSize:
+                                    ),
+                                    SizedBox(
+                                      width: sizeConfiq(context).width * 0.01,
+                                    ),
+                                    Text(
+                                      'Preston Rd. Inglewood',
+                                      style: TextStyle(
+                                          color: white,
+                                          fontSize:
                                           sizeConfiq(context).width * 0.043),
-                                )
+                                    )
+                                  ],
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Image(
+                                      image:
+                                      AssetImage('assets/icons/group.png'),
+                                      width: ConfigSize(context).width * 0.03,
+                                    ),
+                                    Text(
+                                      '2 Residents',
+                                      style: TextStyle(
+                                          color: white,
+                                          fontSize:
+                                          sizeConfiq(context).width * 0.043),
+                                    )
+                                  ],
+                                ),
                               ],
                             ),
                           ],
@@ -300,7 +334,7 @@ class _MyHomeApllyState extends State<MyHomeAplly> {
                     ),
                   ),
                   Positioned(
-                    top: sizeConfiq(context).height * 0.42,
+                    top: sizeConfiq(context).height * 0.46,
                     child: Container(
                       width: sizeConfiq(context).width,
                       height: sizeConfiq(context).height * 0.8,
@@ -371,63 +405,69 @@ class _MyHomeApllyState extends State<MyHomeAplly> {
                             ),
                             Row(
                               children: [
-                                Container(
-                                  height: 50,
-                                  width: 160,
-                                  child: Card(
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(32)),
-                                      color: HexColor("#F4F4F4"),
-                                      elevation: 2,
-                                      child: Center(
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Image.asset(
-                                              "images/order.png",
-                                              height: 30,
-                                            ),
-                                            Text(
-                                              'Floor cleaning',
-                                              style: TextStyle(
-                                                  color: Colors.black87,
-                                                  fontSize: 15,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          ],
+                                GestureDetector(
+                                  onTap:(){},
+                                  child: Container(
+                                    height: 45,
+                                    //  width: 130,
+
+                                    decoration: BoxDecoration(
+                                      color:Color(0xFFf7f7f7),
+                                      borderRadius: BorderRadius.circular(32),
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.center,
+                                      children: [
+                                        SizedBox(width: 15),
+                                        SvgPicture.asset(
+                                          "assets/icons/floorcleaningsvg.svg",
+                                          height: 20,
                                         ),
-                                      )),
+                                        SizedBox(width: 10),
+                                        Text(
+                                          'Floor cleaning',
+                                          style: TextStyle(
+                                              color: Colors.black87,
+                                              fontSize: 13,
+                                              fontWeight: FontWeight.w400),
+                                        ),
+                                        SizedBox(width: 15),
+                                      ],
+                                    ),
+                                  ),
                                 ),
-                                Container(
-                                  height: 50,
-                                  width: 160,
-                                  child: Card(
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(32)),
-                                      color: HexColor("#F4F4F4"),
-                                      elevation: 2,
-                                      child: Center(
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Image.asset(
-                                              "images/waching.png",
-                                              height: 30,
-                                            ),
-                                            Text(
-                                              'Washing clothes',
-                                              style: TextStyle(
-                                                  color: Colors.black87,
-                                                  fontSize: 15,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          ],
+                                GestureDetector(
+                                  onTap:(){},
+                                  child: Container(
+                                    height: 45,
+                                    //  width: 130,
+
+                                    decoration: BoxDecoration(
+                                      color:Color(0xFFf7f7f7),
+                                      borderRadius: BorderRadius.circular(32),
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.center,
+                                      children: [
+                                        SizedBox(width: 15),
+                                        SvgPicture.asset(
+                                          "assets/icons/washedclothes.svg",
+                                          height: 21,
                                         ),
-                                      )),
+                                        SizedBox(width: 10),
+                                        Text(
+                                          'Washing clothes  ',
+                                          style: TextStyle(
+                                              color: Colors.black87,
+                                              fontSize: 13,
+                                              fontWeight: FontWeight.w400),
+                                        ),
+                                        SizedBox(width: 15),
+                                      ],
+                                    ),
+                                  ),
                                 ),
                               ],
                             ),
@@ -453,7 +493,7 @@ class _MyHomeApllyState extends State<MyHomeAplly> {
                     ),
                   ),
                   Positioned(
-                    top: sizeConfiq(context).height * 0.38,
+                    top: sizeConfiq(context).height * 0.41,
                     right: sizeConfiq(context).width * 0.05,
                     left: sizeConfiq(context).width * 0.05,
                     child: Container(
@@ -469,7 +509,7 @@ class _MyHomeApllyState extends State<MyHomeAplly> {
                               blurRadius: 7,
                               // blur radius
                               offset:
-                                  Offset(0, 10), // changes position of shadow
+                              Offset(0, 10), // changes position of shadow
                               //first paramerter of offset is left-right
                               //second parameter is top to down
                             ),
@@ -489,7 +529,7 @@ class _MyHomeApllyState extends State<MyHomeAplly> {
                                   right: sizeConfiq(context).width * 0.03),
                               child: Row(
                                 mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
                                     "Time & date (2hours)",
@@ -514,9 +554,12 @@ class _MyHomeApllyState extends State<MyHomeAplly> {
                             Row(
                               children: [
                                 Icon(Icons.date_range_outlined),
-                                Text('22May'),
                                 SizedBox(
                                   width: 4,
+                                ),
+                                Text('22May'),
+                                SizedBox(
+                                  width: 8,
                                 ),
                                 Icon(Icons.timelapse),
                                 SizedBox(
@@ -526,9 +569,12 @@ class _MyHomeApllyState extends State<MyHomeAplly> {
                                 Padding(
                                   padding: const EdgeInsets.only(left: 80),
                                   child: Text(
+
                                     "255\$",
+
                                     style: TextStyle(
-                                        color: Colors.black, fontSize: 18),
+
+                                        color: Colors.black, fontSize: 18,fontWeight: FontWeight.bold),
                                   ),
                                 ),
                               ],
@@ -593,7 +639,7 @@ class _MyHomeApllyState extends State<MyHomeAplly> {
                                   radius: 25,
                                   backgroundColor: Colors.white,
                                   backgroundImage:
-                                      AssetImage("images/notification.png"),
+                                  AssetImage("images/notification.png"),
                                 ),
                               ),
                               SizedBox(width: sizeConfiq(context).width * 0.03),
@@ -607,7 +653,7 @@ class _MyHomeApllyState extends State<MyHomeAplly> {
                                       color: calenderColor,
                                       fontWeight: FontWeight.bold,
                                       fontSize:
-                                          sizeConfiq(context).width * 0.04,
+                                      sizeConfiq(context).width * 0.04,
                                     ),
                                   ),
                                   Row(
@@ -619,13 +665,13 @@ class _MyHomeApllyState extends State<MyHomeAplly> {
                                       ),
                                       SizedBox(
                                           width:
-                                              sizeConfiq(context).width * 0.01),
+                                          sizeConfiq(context).width * 0.01),
                                       Text(
                                         '4.9',
                                         style: TextStyle(
                                             fontSize:
-                                                sizeConfiq(context).width *
-                                                    0.04,
+                                            sizeConfiq(context).width *
+                                                0.04,
                                             color: calenderColor),
                                       ),
                                     ],
@@ -639,14 +685,14 @@ class _MyHomeApllyState extends State<MyHomeAplly> {
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   MaterialButton(
-                                      minWidth: 75,
+                                      minWidth: 100,
                                       height: 37,
-                                      color: Colors.green.shade800,
+                                      color: Color(0xFF33ce85),
                                       shape: RoundedRectangleBorder(
                                           borderRadius:
-                                              BorderRadius.circular(8.0),
+                                          BorderRadius.circular(8.0),
                                           side: BorderSide(
-                                            color: Colors.green.shade800,
+                                            color: Colors.green.shade300,
                                           )),
                                       onPressed: () {
                                         Get.to(MessengerScreen());
@@ -678,9 +724,10 @@ class _MyHomeApllyState extends State<MyHomeAplly> {
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
                       children: [
-                        Text("Perposal",
+
+                        Text("Proposal",
                             style:
-                                TextStyle(color: Colors.black, fontSize: 17)),
+                            TextStyle(color: Colors.black, fontSize: 17)),
                       ],
                     ),
                   ),
@@ -696,25 +743,25 @@ class _MyHomeApllyState extends State<MyHomeAplly> {
                             maxLines: 4,
                             autofocus: false,
                             decoration: InputDecoration(
-                              hintText: "Type your perposal here",
+                              hintText: "Type your proposal here",
 
                               hintStyle: TextStyle(color: Colors.grey),
                               border: OutlineInputBorder(),
                               errorStyle:
-                                  TextStyle(color: Colors.red, fontSize: 15),
+                              TextStyle(color: Colors.red, fontSize: 15),
                               // filled: true,
                               // fillColor: Colors.white,
                               enabledBorder: OutlineInputBorder(
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(12.0)),
+                                BorderRadius.all(Radius.circular(12.0)),
                                 borderSide:
-                                    BorderSide(color: Colors.grey, width: 1),
+                                BorderSide(color: Colors.grey, width: 1),
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(10.0)),
+                                BorderRadius.all(Radius.circular(10.0)),
                                 borderSide:
-                                    BorderSide(color: Colors.grey, width: 1),
+                                BorderSide(color: Colors.grey, width: 1),
                               ),
                             ),
                             // controller: usernamecontroller,
@@ -741,7 +788,7 @@ class _MyHomeApllyState extends State<MyHomeAplly> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'Aplly',
+                                  'Apply',
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 20),
                                 ),
@@ -790,11 +837,10 @@ class IconButtons extends StatelessWidget {
   final String subTitle;
   final String imgsrc;
 
-  IconButtons(
-      {requiredkey,
-      required this.title,
-      required this.subTitle,
-      required this.imgsrc});
+  IconButtons({requiredkey,
+    required this.title,
+    required this.subTitle,
+    required this.imgsrc});
 
   @override
   Widget build(BuildContext context) {

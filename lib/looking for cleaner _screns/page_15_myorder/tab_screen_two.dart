@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:hexcolor/hexcolor.dart';
+
+import '../../widgets/constant.dart';
 
 class TabScreen_Two extends StatelessWidget {
   @override
@@ -243,25 +246,26 @@ class TabScreen_Two extends StatelessWidget {
                                       child: Card(
                                           shape: RoundedRectangleBorder(
                                               borderRadius:
-                                                  BorderRadius.circular(32)),
+                                              BorderRadius.circular(32)),
                                           color: HexColor("#F4F4F4"),
                                           elevation: 2,
                                           child: Center(
                                             child: Row(
                                               mainAxisAlignment:
-                                                  MainAxisAlignment.center,
+                                              MainAxisAlignment.center,
                                               children: [
-                                                Image.asset(
-                                                  "images/order.png",
-                                                  height: 30,
+                                                SizedBox(width: sizeConfiq(context).width*0.02,),
+                                                SvgPicture.asset(
+                                                  'images/floorcleaningsvg.svg',
+                                                  height: 18,
                                                 ),
+                                                SizedBox(width: sizeConfiq(context).width*0.02,),
                                                 Text(
                                                   'Floor cleaning  ',
                                                   style: TextStyle(
                                                       color: Colors.black87,
                                                       fontSize: 15,
-                                                      fontWeight:
-                                                          FontWeight.w400),
+                                                      fontWeight: FontWeight.w400),
                                                 ),
                                               ],
                                             ),
@@ -273,25 +277,26 @@ class TabScreen_Two extends StatelessWidget {
                                       child: Card(
                                           shape: RoundedRectangleBorder(
                                               borderRadius:
-                                                  BorderRadius.circular(32)),
+                                              BorderRadius.circular(32)),
                                           color: HexColor("#F4F4F4"),
                                           elevation: 2,
                                           child: Center(
                                             child: Row(
                                               mainAxisAlignment:
-                                                  MainAxisAlignment.center,
+                                              MainAxisAlignment.center,
                                               children: [
-                                                Image.asset(
-                                                  "images/waching.png",
-                                                  height: 30,
+                                                SizedBox(width: sizeConfiq(context).width*0.02,),
+                                                SvgPicture.asset(
+                                                  'images/washedclothes.svg',
+                                                  height: 18,
                                                 ),
+                                                SizedBox(width: sizeConfiq(context).width*0.02,),
                                                 Text(
                                                   'Washing clothes  ',
                                                   style: TextStyle(
                                                       color: Colors.black87,
                                                       fontSize: 15,
-                                                      fontWeight:
-                                                          FontWeight.w400),
+                                                      fontWeight: FontWeight.w400),
                                                 ),
                                               ],
                                             ),

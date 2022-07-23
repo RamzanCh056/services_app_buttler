@@ -121,7 +121,7 @@ class MessengerScreen extends StatelessWidget {
               Container(
                 color: Colors.grey.withOpacity(0.1),
                 width: double.infinity,
-                height: sizeConfiq(context).height,
+                height: sizeConfiq(context).height*0.98,
                 child: Padding(
                   padding: EdgeInsets.symmetric(
                       horizontal: sizeConfiq(context).width * 0.05),
@@ -264,77 +264,7 @@ class MessengerScreen extends StatelessWidget {
                       SizedBox(
                         height: sizeConfiq(context).height * 0.09,
                       ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Container(
-                              padding: EdgeInsets.symmetric(
-                                  horizontal: sizeConfiq(context).width * 0.03,
-                                  vertical: sizeConfiq(context).height * 0.015),
-                              decoration: BoxDecoration(
-                                  border: Border.all(color: Color(0xFF666666)),
-                                  borderRadius: BorderRadius.circular(
-                                      sizeConfiq(context).width * 0.09)),
-                              child: Container(
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Container(
-                                          width:
-                                              sizeConfiq(context).width * 0.07,
-                                          height:
-                                              sizeConfiq(context).width * 0.07,
-                                          decoration: BoxDecoration(
-                                              border: Border.all(
-                                                color: Color(0xFF000000),
-                                              ),
-                                              shape: BoxShape.circle),
-                                          child: Center(
-                                            child: Icon(
-                                              Icons.camera_alt,
-                                              color: calenderColor,
-                                              size: 18,
-                                            ),
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          height: sizeConfiq(context).height *
-                                              0.027,
-                                          child: VerticalDivider(
-                                            thickness: 3,
-                                            color: Color(0xFF131250),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Image.asset(
-                                      'assets/icons/smile.png',
-                                      width: sizeConfiq(context).width * 0.08,
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            width: sizeConfiq(context).width * 0.02,
-                          ),
-                          Container(
-                            alignment: Alignment.center,
-                            width: sizeConfiq(context).width * 0.15,
-                            height: sizeConfiq(context).height * 0.09,
-                            decoration: BoxDecoration(
-                                color: lightgreen, shape: BoxShape.circle),
-                            child: Icon(
-                              Icons.send,
-                              color: white,
-                            ),
-                          ),
-                        ],
-                      ),
+
                     ],
                   ),
                 ),
@@ -342,7 +272,77 @@ class MessengerScreen extends StatelessWidget {
             ],
           ),
         ),
-      ),
+     bottomNavigationBar:   Row(
+       children: [
+         Expanded(
+           child: Container(
+             padding: EdgeInsets.symmetric(
+                 horizontal: sizeConfiq(context).width * 0.03,
+                 vertical: sizeConfiq(context).height * 0.015),
+             decoration: BoxDecoration(
+                 border: Border.all(color: Color(0xFF666666)),
+                 borderRadius: BorderRadius.circular(
+                     sizeConfiq(context).width * 0.09)),
+             child: Container(
+               child: Row(
+                 mainAxisAlignment:
+                 MainAxisAlignment.spaceBetween,
+                 children: [
+                   Row(
+                     children: [
+                       Container(
+                         width:
+                         sizeConfiq(context).width * 0.07,
+                         height:
+                         sizeConfiq(context).width * 0.07,
+                         decoration: BoxDecoration(
+                             border: Border.all(
+                               color: Color(0xFF000000),
+                             ),
+                             shape: BoxShape.circle),
+                         child: Center(
+                           child: Icon(
+                             Icons.camera_alt,
+                             color: calenderColor,
+                             size: 18,
+                           ),
+                         ),
+                       ),
+                       SizedBox(
+                         height: sizeConfiq(context).height *
+                             0.027,
+                         child: VerticalDivider(
+                           thickness: 3,
+                           color: Color(0xFF131250),
+                         ),
+                       ),
+                     ],
+                   ),
+                   Image.asset(
+                     'assets/icons/smile.png',
+                     width: sizeConfiq(context).width * 0.08,
+                   ),
+                 ],
+               ),
+             ),
+           ),
+         ),
+         SizedBox(
+           width: sizeConfiq(context).width * 0.02,
+         ),
+         Container(
+           alignment: Alignment.center,
+           width: sizeConfiq(context).width * 0.15,
+           height: sizeConfiq(context).height * 0.09,
+           decoration: BoxDecoration(
+               color: lightgreen, shape: BoxShape.circle),
+           child: Icon(
+             Icons.send,
+             color: white,
+           ),
+         ),
+       ],
+     ), ),
     );
   }
 }

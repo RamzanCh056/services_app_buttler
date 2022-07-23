@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:get/instance_manager.dart';
 import 'package:intl/intl.dart';
@@ -28,7 +29,7 @@ class _HomePageState extends State<HomePage> {
         children: [
           Container(
             //  color: Colors.red,
-            height: ConfigSize(context).height * 1.5,
+            height: ConfigSize(context).height * 1.58,
             child: Stack(
               // fit: StackFit.expand,
               children: [
@@ -138,7 +139,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Positioned(
-                  top: ConfigSize(context).height * 0.57,
+                  top: ConfigSize(context).height * 0.65,
                   left: 0,
                   right: 0,
                   child: Container(
@@ -479,15 +480,14 @@ class _HomePageState extends State<HomePage> {
                                             ),
                                             child: Row(
                                               children: [
-                                                Image(
-                                                  image: AssetImage(
-                                                      'assets/icons/swipper.png'),
+                                                SvgPicture.asset(
+                                                  'assets/icons/floorcleaningsvg.svg',
                                                   width: ConfigSize(context)
                                                           .width *
-                                                      0.05,
+                                                      0.03,
                                                   height: ConfigSize(context)
                                                           .height *
-                                                      0.05,
+                                                      0.03,
                                                 ),
                                                 SizedBox(
                                                   width: ConfigSize(context)
@@ -533,17 +533,16 @@ class _HomePageState extends State<HomePage> {
                                                   ),
                                                   child: Row(
                                                     children: [
-                                                      Image(
-                                                        image: AssetImage(
-                                                            'assets/icons/rect.png'),
+                                                      SvgPicture.asset(
+                                                        'assets/icons/washedclothes.svg',
                                                         width:
                                                             ConfigSize(context)
                                                                     .width *
-                                                                0.05,
+                                                                0.03,
                                                         height:
                                                             ConfigSize(context)
                                                                     .height *
-                                                                0.05,
+                                                                0.03,
                                                       ),
                                                       SizedBox(
                                                         width:
@@ -777,192 +776,203 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsets.only(
-                    top: ConfigSize(context).height * 0.51,
-                    left: ConfigSize(context).height * 0.03,
-                    right: ConfigSize(context).height * 0.03,
-                  ),
-                  child: Card(
-                    elevation: 4,
-                    child: Container(
-                      height: ConfigSize(context).height * 0.2,
-                      width: 390,
-                      padding:
-                          EdgeInsets.all(ConfigSize(context).width * 0.035),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(12.0),
-                        boxShadow: [
-                          BoxShadow(
-                              offset: Offset(0, -1),
-                              color: Colors.grey.shade200),
-                        ],
-                      ),
-                      child: Column(
-                        children: [
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    'Time & Date(2 hours)',
-                                    style: TextStyle(
-                                      fontSize:
-                                          ConfigSize(context).width * 0.036,
-                                      fontFamily: 'SF-Pro-Dis-Regular',
-                                      color: Colors.black54,
-                                    ),
-                                  ),
-                                  Text(
-                                    'Total Price',
-                                    style: TextStyle(
-                                      fontSize:
-                                          ConfigSize(context).width * 0.036,
-                                      fontFamily: 'SF-Pro-Dis-Regular',
-                                      color: Colors.black54,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Row(
-                                    children: [
-                                      Image(
-                                        image: AssetImage(
-                                            'assets/icons/calender.png'),
-                                        width: ConfigSize(context).width * 0.06,
-                                        height:
-                                            ConfigSize(context).height * 0.05,
+                Positioned(
+                  top: 30,
+                  right:0,left:0,
+                  child: Padding(
+                    padding: EdgeInsets.only(
+                      top: ConfigSize(context).height * 0.51,
+                      left: ConfigSize(context).width * 0.03,
+                      right: ConfigSize(context).width * 0.03,
+                    ),
+                    child: Card(
+                      elevation: 4,
+                      child: Container(
+                        height: ConfigSize(context).height * 0.2,
+                        // width: 380,
+                        padding:
+                            EdgeInsets.all(ConfigSize(context).width * 0.033),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(12.0),
+                          boxShadow: [
+                            BoxShadow(
+                                offset: Offset(0, -1),
+                                color: Colors.grey.shade200),
+                          ],
+                        ),
+                        child: Column(
+                          children: [
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      'Time & Date(2 hours)',
+                                      style: TextStyle(
+                                        fontSize:
+                                            ConfigSize(context).width * 0.036,
+                                        fontFamily: 'SF-Pro-Dis-Regular',
+                                        color: Colors.black54,
                                       ),
-                                      SizedBox(
-                                        width: ConfigSize(context).width * 0.01,
+                                    ),
+                                    Text(
+                                      'Total Price',
+                                      style: TextStyle(
+                                        fontSize:
+                                            ConfigSize(context).width * 0.036,
+                                        fontFamily: 'SF-Pro-Dis-Regular',
+                                        color: Colors.black54,
                                       ),
-                                      Text(
-                                        '22 May',
-                                        style: TextStyle(
-                                          fontSize:
-                                              ConfigSize(context).width * 0.036,
-                                          fontFamily: 'SF-Pro-Dis-Regular',
-                                          color: Color(0xff202020),
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Image(
+                                          image: AssetImage(
+                                              'assets/icons/calender.png'),
+                                          width:
+                                              ConfigSize(context).width * 0.06,
+                                          height:
+                                              ConfigSize(context).height * 0.05,
                                         ),
-                                      ),
-                                      SizedBox(
-                                        width: ConfigSize(context).width * 0.03,
-                                      ),
-                                      Image(
-                                        image: AssetImage(
-                                            'assets/icons/clock.png'),
-                                        width: ConfigSize(context).width * 0.05,
-                                        height:
-                                            ConfigSize(context).height * 0.05,
-                                      ),
-                                      SizedBox(
-                                        width: ConfigSize(context).width * 0.01,
-                                      ),
-                                      Text(
-                                        '10:30 - 11:30pm',
-                                        style: TextStyle(
-                                          fontSize:
-                                              ConfigSize(context).width * 0.036,
-                                          fontFamily: 'SF-Pro-Dis-Regular',
-                                          color: Color(0xff202020),
+                                        SizedBox(
+                                          width:
+                                              ConfigSize(context).width * 0.01,
                                         ),
+                                        Text(
+                                          '22 May',
+                                          style: TextStyle(
+                                            fontSize:
+                                                ConfigSize(context).width *
+                                                    0.036,
+                                            fontFamily: 'SF-Pro-Dis-Regular',
+                                            color: Color(0xff202020),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width:
+                                              ConfigSize(context).width * 0.03,
+                                        ),
+                                        Image(
+                                          image: AssetImage(
+                                              'assets/icons/clock.png'),
+                                          width:
+                                              ConfigSize(context).width * 0.05,
+                                          height:
+                                              ConfigSize(context).height * 0.05,
+                                        ),
+                                        SizedBox(
+                                          width:
+                                              ConfigSize(context).width * 0.01,
+                                        ),
+                                        Text(
+                                          '10:30 - 11:30pm',
+                                          style: TextStyle(
+                                            fontSize:
+                                                ConfigSize(context).width *
+                                                    0.036,
+                                            fontFamily: 'SF-Pro-Dis-Regular',
+                                            color: Color(0xff202020),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Text(
+                                      '\$255',
+                                      style: TextStyle(
+                                        fontSize:
+                                            ConfigSize(context).width * 0.036,
+                                        fontFamily: 'SF-Pro-Display',
+                                        color: Color(0xff202020),
                                       ),
-                                    ],
+                                    )
+                                  ],
+                                ),
+                              ],
+                            ),
+                            Row(
+                              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'Hrs',
+                                  style: TextStyle(
+                                    fontSize: ConfigSize(context).width * 0.035,
+                                    fontFamily: 'SF-Pro-Dis-Regular',
+                                    color: Color(0xff202020),
                                   ),
-                                  Text(
-                                    '\$255',
-                                    style: TextStyle(
-                                      fontSize:
-                                          ConfigSize(context).width * 0.036,
-                                      fontFamily: 'SF-Pro-Display',
-                                      color: Color(0xff202020),
+                                ),
+                                SizedBox(
+                                  width: ConfigSize(context).width * 0.05,
+                                ),
+                                Text(
+                                  'Mins',
+                                  style: TextStyle(
+                                    fontSize: ConfigSize(context).width * 0.035,
+                                    fontFamily: 'SF-Pro-Dis-Regular',
+                                    color: Color(0xff202020),
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: ConfigSize(context).width * 0.05,
+                                ),
+                                Text(
+                                  'Sec',
+                                  style: TextStyle(
+                                    fontSize: ConfigSize(context).width * 0.035,
+                                    fontFamily: 'SF-Pro-Dis-Regular',
+                                    color: Color(0xff202020),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  formattedDate,
+                                  style: TextStyle(
+                                    fontSize: ConfigSize(context).width * 0.06,
+                                    fontFamily: 'SF-Pro-Dis-Regular',
+                                    color: Color(0xff202020),
+                                  ),
+                                ),
+                                GestureDetector(
+                                  onTap: () {
+                                    Get.to(const HomwOrderFinish());
+                                  },
+                                  child: Container(
+                                    alignment: Alignment.center,
+                                    height: ConfigSize(context).height * 0.06,
+                                    // width: 90,
+                                    width: ConfigSize(context).width * 0.3,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xff33ce85),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
-                                  )
-                                ],
-                              ),
-                            ],
-                          ),
-                          Row(
-                            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                'Hrs',
-                                style: TextStyle(
-                                  fontSize: ConfigSize(context).width * 0.035,
-                                  fontFamily: 'SF-Pro-Dis-Regular',
-                                  color: Color(0xff202020),
-                                ),
-                              ),
-                              SizedBox(
-                                width: ConfigSize(context).width * 0.05,
-                              ),
-                              Text(
-                                'Mins',
-                                style: TextStyle(
-                                  fontSize: ConfigSize(context).width * 0.035,
-                                  fontFamily: 'SF-Pro-Dis-Regular',
-                                  color: Color(0xff202020),
-                                ),
-                              ),
-                              SizedBox(
-                                width: ConfigSize(context).width * 0.05,
-                              ),
-                              Text(
-                                'Sec',
-                                style: TextStyle(
-                                  fontSize: ConfigSize(context).width * 0.035,
-                                  fontFamily: 'SF-Pro-Dis-Regular',
-                                  color: Color(0xff202020),
-                                ),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                formattedDate,
-                                style: TextStyle(
-                                  fontSize: ConfigSize(context).width * 0.06,
-                                  fontFamily: 'SF-Pro-Dis-Regular',
-                                  color: Color(0xff202020),
-                                ),
-                              ),
-                              GestureDetector(
-                                onTap: () {
-                                  Get.to(const HomwOrderFinish());
-                                },
-                                child: Container(
-                                  alignment: Alignment.center,
-                                  height: ConfigSize(context).height * 0.045,
-                                  // width: 90,
-                                  width: ConfigSize(context).height * 0.13,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xff33ce85),
-                                    borderRadius: BorderRadius.circular(8.0),
-                                  ),
-                                  child: Text(
-                                    'Start',
-                                    style: TextStyle(
-                                      fontSize:
-                                          ConfigSize(context).width * 0.04,
-                                      fontFamily: 'SF-Pro-Dis-Regular',
-                                      color: Colors.white,
+                                    child: Text(
+                                      'Start',
+                                      style: TextStyle(
+                                        fontSize:
+                                            ConfigSize(context).width * 0.04,
+                                        fontFamily: 'SF-Pro-Dis-Regular',
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ],
-                          ),
-                        ],
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),

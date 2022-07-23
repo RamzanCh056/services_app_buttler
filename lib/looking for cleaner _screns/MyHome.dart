@@ -22,7 +22,7 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
         body: ListView(
           children: [
             Container(
-              height: sizeConfiq(context).height,
+              height: sizeConfiq(context).height*1.18,
               child: Stack(
                 children: [
                   Container(
@@ -184,8 +184,11 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                             ),
                             Row(
                               children: [
-                                Text(
-                                    "Lorem ipsum dolor sit amet, consetetur sadipscing elitr,\nsed diam nonumy eirmod tempor invidunt ut labore et\ndolore magna aliquyam erat,sed diam voluptua.At vero\neos et accusam et justo duo dolores et ea rebum.Stet\nclita kasd m et justo duo dolores et e....Read More"),
+                                Expanded(
+
+                                  child: Text(
+                                      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr,\nsed diam nonumy eirmod tempor invidunt ut labore et\ndolore magna aliquyam erat,sed diam voluptua.At vero\neos et accusam et justo duo dolores et ea rebum.Stet\nclita kasd m et justo duo dolores et e....Read More"),
+                                ),
                               ],
                             ),
                             SizedBox(

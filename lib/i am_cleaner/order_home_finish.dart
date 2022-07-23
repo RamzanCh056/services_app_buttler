@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -179,7 +180,7 @@ class _HomwOrderFinishState extends State<HomwOrderFinish> {
         children: [
           Container(
             //  color: Colors.red,
-            height: ConfigSize(context).height * 1.5,
+            height: ConfigSize(context).height * 1.58,
             child: Stack(
               // fit: StackFit.expand,
               children: [
@@ -289,7 +290,7 @@ class _HomwOrderFinishState extends State<HomwOrderFinish> {
                   ),
                 ),
                 Positioned(
-                  top: ConfigSize(context).height * 0.57,
+                  top: ConfigSize(context).height * 0.65,
                   left: 0,
                   right: 0,
                   child: Container(
@@ -617,41 +618,40 @@ class _HomwOrderFinishState extends State<HomwOrderFinish> {
                                           Container(
                                             padding: EdgeInsets.symmetric(
                                                 horizontal:
-                                                    ConfigSize(context).width *
-                                                        0.03),
+                                                ConfigSize(context).width *
+                                                    0.03),
                                             height: ConfigSize(context).height *
                                                 0.06,
                                             decoration: BoxDecoration(
                                               color: Color.fromARGB(
-                                                      223, 220, 220, 220)
+                                                  223, 220, 220, 220)
                                                   .withOpacity(0.4),
                                               borderRadius:
-                                                  BorderRadius.circular(20.0),
+                                              BorderRadius.circular(20.0),
                                             ),
                                             child: Row(
                                               children: [
-                                                Image(
-                                                  image: AssetImage(
-                                                      'assets/icons/swipper.png'),
+                                                SvgPicture.asset(
+                                                  'assets/icons/floorcleaningsvg.svg',
                                                   width: ConfigSize(context)
-                                                          .width *
-                                                      0.05,
+                                                      .width *
+                                                      0.03,
                                                   height: ConfigSize(context)
-                                                          .height *
-                                                      0.05,
+                                                      .height *
+                                                      0.03,
                                                 ),
                                                 SizedBox(
                                                   width: ConfigSize(context)
-                                                          .width *
+                                                      .width *
                                                       0.01,
                                                 ),
                                                 Text(
                                                   'Floor Cleaning',
                                                   style: TextStyle(
                                                     fontSize:
-                                                        ConfigSize(context)
-                                                                .width *
-                                                            0.036,
+                                                    ConfigSize(context)
+                                                        .width *
+                                                        0.036,
                                                     color: Colors.black,
                                                   ),
                                                 )
@@ -668,46 +668,45 @@ class _HomwOrderFinishState extends State<HomwOrderFinish> {
                                                 Container(
                                                   padding: EdgeInsets.symmetric(
                                                       horizontal:
-                                                          ConfigSize(context)
-                                                                  .width *
-                                                              0.03),
+                                                      ConfigSize(context)
+                                                          .width *
+                                                          0.03),
                                                   height: ConfigSize(context)
-                                                          .height *
+                                                      .height *
                                                       0.06,
                                                   decoration: BoxDecoration(
                                                     color: Color.fromARGB(
-                                                            223, 220, 220, 220)
+                                                        223, 220, 220, 220)
                                                         .withOpacity(0.4),
                                                     borderRadius:
-                                                        BorderRadius.circular(
-                                                            20.0),
+                                                    BorderRadius.circular(
+                                                        20.0),
                                                   ),
                                                   child: Row(
                                                     children: [
-                                                      Image(
-                                                        image: AssetImage(
-                                                            'assets/icons/rect.png'),
+                                                      SvgPicture.asset(
+                                                        'assets/icons/washedclothes.svg',
                                                         width:
-                                                            ConfigSize(context)
-                                                                    .width *
-                                                                0.05,
+                                                        ConfigSize(context)
+                                                            .width *
+                                                            0.03,
                                                         height:
-                                                            ConfigSize(context)
-                                                                    .height *
-                                                                0.05,
+                                                        ConfigSize(context)
+                                                            .height *
+                                                            0.03,
                                                       ),
                                                       SizedBox(
                                                         width:
-                                                            ConfigSize(context)
-                                                                    .width *
-                                                                0.01,
+                                                        ConfigSize(context)
+                                                            .width *
+                                                            0.01,
                                                       ),
                                                       Text(
                                                         'Washing Clothes',
                                                         style: TextStyle(
                                                           fontSize: ConfigSize(
-                                                                      context)
-                                                                  .width *
+                                                              context)
+                                                              .width *
                                                               0.036,
                                                           color: Colors.black,
                                                         ),
@@ -928,192 +927,204 @@ class _HomwOrderFinishState extends State<HomwOrderFinish> {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsets.only(
-                    top: ConfigSize(context).height * 0.51,
-                    left: ConfigSize(context).height * 0.03,
-                    right: ConfigSize(context).height * 0.03,
-                  ),
-                  child: Card(
-                    elevation: 4,
-                    child: Container(
-                      height: ConfigSize(context).height * 0.2,
-                      width: 390,
-                      padding:
-                          EdgeInsets.all(ConfigSize(context).width * 0.035),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(12.0),
-                        boxShadow: [
-                          BoxShadow(
-                              offset: Offset(0, -1),
-                              color: Colors.grey.shade200),
-                        ],
-                      ),
-                      child: Column(
-                        children: [
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    'Time & Date(2 hours)',
-                                    style: TextStyle(
-                                      fontSize:
-                                          ConfigSize(context).width * 0.036,
-                                      fontFamily: 'SF-Pro-Dis-Regular',
-                                      color: Colors.black54,
-                                    ),
-                                  ),
-                                  Text(
-                                    'Total Price',
-                                    style: TextStyle(
-                                      fontSize:
-                                          ConfigSize(context).width * 0.036,
-                                      fontFamily: 'SF-Pro-Dis-Regular',
-                                      color: Colors.black54,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Row(
-                                    children: [
-                                      Image(
-                                        image: AssetImage(
-                                            'assets/icons/calender.png'),
-                                        width: ConfigSize(context).width * 0.06,
-                                        height:
-                                            ConfigSize(context).height * 0.05,
+                Positioned(
+                  top: 30,
+                  right:0,left:0,
+                  child: Padding(
+                    padding: EdgeInsets.only(
+                      top: ConfigSize(context).height * 0.51,
+                      left: ConfigSize(context).height * 0.016,
+                      right: ConfigSize(context).height * 0.016,
+                    ),
+                    child: Card(
+                      elevation: 4,
+                      child: Container(
+                        height: ConfigSize(context).height * 0.2,
+                        // width: 380,
+                        padding:
+                            EdgeInsets.all(ConfigSize(context).width * 0.033),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(12.0),
+                          boxShadow: [
+                            BoxShadow(
+                                offset: Offset(0, -1),
+                                color: Colors.grey.shade200),
+                          ],
+                        ),
+                        child: Column(
+                          children: [
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      'Time & Date(2 hours)',
+                                      style: TextStyle(
+                                        fontSize:
+                                            ConfigSize(context).width * 0.036,
+                                        fontFamily: 'SF-Pro-Dis-Regular',
+                                        color: Colors.black54,
                                       ),
-                                      SizedBox(
-                                        width: ConfigSize(context).width * 0.01,
+                                    ),
+                                    Text(
+                                      'Total Price',
+                                      style: TextStyle(
+                                        fontSize:
+                                            ConfigSize(context).width * 0.036,
+                                        fontFamily: 'SF-Pro-Dis-Regular',
+                                        color: Colors.black54,
                                       ),
-                                      Text(
-                                        '22 May',
-                                        style: TextStyle(
-                                          fontSize:
-                                              ConfigSize(context).width * 0.036,
-                                          fontFamily: 'SF-Pro-Dis-Regular',
-                                          color: Color(0xff202020),
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Image(
+                                          image: AssetImage(
+                                              'assets/icons/calender.png'),
+                                          width:
+                                              ConfigSize(context).width * 0.06,
+                                          height:
+                                              ConfigSize(context).height * 0.05,
                                         ),
-                                      ),
-                                      SizedBox(
-                                        width: ConfigSize(context).width * 0.03,
-                                      ),
-                                      Image(
-                                        image: AssetImage(
-                                            'assets/icons/clock.png'),
-                                        width: ConfigSize(context).width * 0.05,
-                                        height:
-                                            ConfigSize(context).height * 0.05,
-                                      ),
-                                      SizedBox(
-                                        width: ConfigSize(context).width * 0.01,
-                                      ),
-                                      Text(
-                                        '10:30 - 11:30pm',
-                                        style: TextStyle(
-                                          fontSize:
-                                              ConfigSize(context).width * 0.036,
-                                          fontFamily: 'SF-Pro-Dis-Regular',
-                                          color: Color(0xff202020),
+                                        SizedBox(
+                                          width:
+                                              ConfigSize(context).width * 0.01,
                                         ),
+                                        Text(
+                                          '22 May',
+                                          style: TextStyle(
+                                            fontSize:
+                                                ConfigSize(context).width *
+                                                    0.036,
+                                            fontFamily: 'SF-Pro-Dis-Regular',
+                                            color: Color(0xff202020),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width:
+                                              ConfigSize(context).width * 0.03,
+                                        ),
+                                        Image(
+                                          image: AssetImage(
+                                              'assets/icons/clock.png'),
+                                          width:
+                                              ConfigSize(context).width * 0.05,
+                                          height:
+                                              ConfigSize(context).height * 0.05,
+                                        ),
+                                        SizedBox(
+                                          width:
+                                              ConfigSize(context).width * 0.01,
+                                        ),
+                                        Text(
+                                          '10:30 - 11:30pm',
+                                          style: TextStyle(
+                                            fontSize:
+                                                ConfigSize(context).width *
+                                                    0.036,
+                                            fontFamily: 'SF-Pro-Dis-Regular',
+                                            color: Color(0xff202020),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Text(
+                                      '\$255',
+                                      style: TextStyle(
+                                        fontSize:
+                                            ConfigSize(context).width * 0.036,
+                                        fontFamily: 'SF-Pro-Display',
+                                        color: Color(0xff202020),
                                       ),
-                                    ],
+                                    )
+                                  ],
+                                ),
+                              ],
+                            ),
+                            Row(
+                              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'Hrs',
+                                  style: TextStyle(
+                                    fontSize: ConfigSize(context).width * 0.035,
+                                    fontFamily: 'SF-Pro-Dis-Regular',
+                                    color: Color(0xff202020),
                                   ),
-                                  Text(
-                                    '\$255',
-                                    style: TextStyle(
-                                      fontSize:
-                                          ConfigSize(context).width * 0.036,
-                                      fontFamily: 'SF-Pro-Display',
-                                      color: Color(0xff202020),
+                                ),
+                                SizedBox(
+                                  width: ConfigSize(context).width * 0.05,
+                                ),
+                                Text(
+                                  'Mins',
+                                  style: TextStyle(
+                                    fontSize: ConfigSize(context).width * 0.035,
+                                    fontFamily: 'SF-Pro-Dis-Regular',
+                                    color: Color(0xff202020),
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: ConfigSize(context).width * 0.05,
+                                ),
+                                Text(
+                                  'Sec',
+                                  style: TextStyle(
+                                    fontSize: ConfigSize(context).width * 0.035,
+                                    fontFamily: 'SF-Pro-Dis-Regular',
+                                    color: Color(0xff202020),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  formattedDate,
+                                  style: TextStyle(
+                                    fontSize: ConfigSize(context).width * 0.06,
+                                    fontFamily: 'SF-Pro-Dis-Regular',
+                                    color: Color(0xff202020),
+                                  ),
+                                ),
+                                GestureDetector(
+                                  onTap: () {
+                                    displayBottomSheetthree(context);
+                                  },
+                                  child: Container(
+                                    alignment: Alignment.center,
+                                    height: ConfigSize(context).height * 0.06,
+                                    
+                                    width: ConfigSize(context).width * 0.3,
+                                  
+                                    decoration: BoxDecoration(
+                                      color: HexColor("#005167"),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
-                                  )
-                                ],
-                              ),
-                            ],
-                          ),
-                          Row(
-                            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                'Hrs',
-                                style: TextStyle(
-                                  fontSize: ConfigSize(context).width * 0.035,
-                                  fontFamily: 'SF-Pro-Dis-Regular',
-                                  color: Color(0xff202020),
-                                ),
-                              ),
-                              SizedBox(
-                                width: ConfigSize(context).width * 0.05,
-                              ),
-                              Text(
-                                'Mins',
-                                style: TextStyle(
-                                  fontSize: ConfigSize(context).width * 0.035,
-                                  fontFamily: 'SF-Pro-Dis-Regular',
-                                  color: Color(0xff202020),
-                                ),
-                              ),
-                              SizedBox(
-                                width: ConfigSize(context).width * 0.05,
-                              ),
-                              Text(
-                                'Sec',
-                                style: TextStyle(
-                                  fontSize: ConfigSize(context).width * 0.035,
-                                  fontFamily: 'SF-Pro-Dis-Regular',
-                                  color: Color(0xff202020),
-                                ),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                formattedDate,
-                                style: TextStyle(
-                                  fontSize: ConfigSize(context).width * 0.06,
-                                  fontFamily: 'SF-Pro-Dis-Regular',
-                                  color: Color(0xff202020),
-                                ),
-                              ),
-                              GestureDetector(
-                                onTap: () {
-                                  displayBottomSheetthree(context);
-                                },
-                                child: Container(
-                                  alignment: Alignment.center,
-                                  height: ConfigSize(context).height * 0.045,
-                                  // width: 90,
-                                  width: ConfigSize(context).height * 0.13,
-                                  decoration: BoxDecoration(
-                                    color: HexColor("#005167"),
-                                    borderRadius: BorderRadius.circular(8.0),
-                                  ),
-                                  child: Text(
-                                    'Finish',
-                                    style: TextStyle(
-                                      fontSize:
-                                          ConfigSize(context).width * 0.04,
-                                      fontFamily: 'SF-Pro-Dis-Regular',
-                                      color: Colors.white,
+                                    child: Text(
+                                      'Finish',
+                                      style: TextStyle(
+                                        fontSize:
+                                            ConfigSize(context).width * 0.04,
+                                        fontFamily: 'SF-Pro-Dis-Regular',
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ],
-                          ),
-                        ],
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),

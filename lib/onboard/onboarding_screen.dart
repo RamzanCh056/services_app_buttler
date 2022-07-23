@@ -131,7 +131,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           // )
                           AspectRatio(
                             aspectRatio: 5.9 / 9,
-                            // aspectRatio: 6 / 6,
+                            // aspectRatio: 5 / 8,
                             child: Image.asset(
                               splashData[index]['image']!,
                               height: double.infinity,

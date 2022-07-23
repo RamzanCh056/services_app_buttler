@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -78,7 +79,7 @@ class _ActiveTabState extends State<ActiveTab> {
                             padding: const EdgeInsets.only(top: 18.0),
                             child: Container(
                               decoration: BoxDecoration(
-                                color: Colors.grey.shade200,
+                                color: Color(0xFFf7f7f7),
                                 borderRadius: BorderRadius.circular(5),
                               ),
                               child: Padding(
@@ -88,9 +89,12 @@ class _ActiveTabState extends State<ActiveTab> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Icon(Icons.date_range_outlined),
-                                    Text('22May'),
                                     SizedBox(
                                       width: 4,
+                                    ),
+                                    Text('22May'),
+                                    SizedBox(
+                                      width: 8,
                                     ),
                                     Icon(Icons.timelapse),
                                     SizedBox(
@@ -123,7 +127,7 @@ class _ActiveTabState extends State<ActiveTab> {
                                           ],
                                         ),
                                         SizedBox(
-                                          width: 5,
+                                          width: 8,
                                         ),
                                         Column(
                                           crossAxisAlignment:
@@ -158,14 +162,14 @@ class _ActiveTabState extends State<ActiveTab> {
                                           ],
                                         ),
                                         SizedBox(
-                                          width: 5,
+                                          width: 8,
                                         ),
                                         Column(
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              '8',
+                                              '08',
                                               style: TextStyle(
                                                 fontWeight: FontWeight.bold,
                                               ),
@@ -193,20 +197,20 @@ class _ActiveTabState extends State<ActiveTab> {
                                           ],
                                         ),
                                         SizedBox(
-                                          width: 5,
+                                          width: 8,
                                         ),
                                         Column(
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              '4',
+                                              '04',
                                               style: TextStyle(
                                                 fontWeight: FontWeight.bold,
                                               ),
                                             ),
                                             Text(
-                                              'Bathroom',
+                                              'Bedroom',
                                               style: TextStyle(fontSize: 13),
                                             ),
                                           ],
@@ -223,63 +227,69 @@ class _ActiveTabState extends State<ActiveTab> {
                           ),
                           Row(
                             children: [
-                              Container(
-                                height: 50,
-                                // width: 130,
-                                child: Card(
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(32)),
-                                    color: HexColor("#F4F4F4"),
-                                    elevation: 2,
-                                    child: Center(
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Image.asset(
-                                            "images/order.png",
-                                            height: 30,
-                                          ),
-                                          Text(
-                                            'Floor cleaning  ',
-                                            style: TextStyle(
-                                                color: Colors.black87,
-                                                fontSize: 15,
-                                                fontWeight: FontWeight.w400),
-                                          ),
-                                        ],
+                              GestureDetector(
+                                onTap:(){},
+                                child: Container(
+                                  height: 45,
+                                  //  width: 130,
+
+                                  decoration: BoxDecoration(
+                                    color:Color(0xFFf7f7f7),
+                                    borderRadius: BorderRadius.circular(32),
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                    MainAxisAlignment.center,
+                                    children: [
+                                      SizedBox(width: 15),
+                                      SvgPicture.asset(
+                                        "assets/icons/floorcleaningsvg.svg",
+                                        height: 20,
                                       ),
-                                    )),
+                                      SizedBox(width: 10),
+                                      Text(
+                                        'Floor cleaning',
+                                        style: TextStyle(
+                                            color: Colors.black87,
+                                            fontSize: 13,
+                                            fontWeight: FontWeight.w400),
+                                      ),
+                                      SizedBox(width: 15),
+                                    ],
+                                  ),
+                                ),
                               ),
-                              Container(
-                                height: 50,
-                                //  width: 130,
-                                child: Card(
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(32)),
-                                    color: HexColor("#F4F4F4"),
-                                    elevation: 2,
-                                    child: Center(
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Image.asset(
-                                            "images/waching.png",
-                                            height: 30,
-                                          ),
-                                          Text(
-                                            'Washing clothes  ',
-                                            style: TextStyle(
-                                                color: Colors.black87,
-                                                fontSize: 15,
-                                                fontWeight: FontWeight.w400),
-                                          ),
-                                        ],
+                              GestureDetector(
+                                onTap:(){},
+                                child: Container(
+                                  height: 45,
+                                  //  width: 130,
+
+                                  decoration: BoxDecoration(
+                                    color:Color(0xFFf7f7f7),
+                                    borderRadius: BorderRadius.circular(32),
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.center,
+                                    children: [
+                                      SizedBox(width: 15),
+                                      SvgPicture.asset(
+                                        "assets/icons/washedclothes.svg",
+                                        height: 21,
                                       ),
-                                    )),
+                                      SizedBox(width: 10),
+                                      Text(
+                                        'Washing clothes  ',
+                                        style: TextStyle(
+                                            color: Colors.black87,
+                                            fontSize: 13,
+                                            fontWeight: FontWeight.w400),
+                                      ),
+                                      SizedBox(width: 15),
+                                    ],
+                                  ),
+                                ),
                               ),
                             ],
                           ),
@@ -396,7 +406,7 @@ class _ActiveTabState extends State<ActiveTab> {
                             padding: const EdgeInsets.only(top: 18.0),
                             child: Container(
                               decoration: BoxDecoration(
-                                color: Colors.grey.shade200,
+                                color: Color(0xFFf7f7f7),
                                 borderRadius: BorderRadius.circular(5),
                               ),
                               child: Padding(
@@ -406,9 +416,12 @@ class _ActiveTabState extends State<ActiveTab> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Icon(Icons.date_range_outlined),
-                                    Text('22May'),
                                     SizedBox(
                                       width: 4,
+                                    ),
+                                    Text('22May'),
+                                    SizedBox(
+                                      width: 8,
                                     ),
                                     Icon(Icons.timelapse),
                                     SizedBox(
@@ -441,7 +454,7 @@ class _ActiveTabState extends State<ActiveTab> {
                                           ],
                                         ),
                                         SizedBox(
-                                          width: 5,
+                                          width: 8,
                                         ),
                                         Column(
                                           crossAxisAlignment:
@@ -476,14 +489,14 @@ class _ActiveTabState extends State<ActiveTab> {
                                           ],
                                         ),
                                         SizedBox(
-                                          width: 5,
+                                          width: 8,
                                         ),
                                         Column(
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              '8',
+                                              '08',
                                               style: TextStyle(
                                                 fontWeight: FontWeight.bold,
                                               ),
@@ -511,20 +524,20 @@ class _ActiveTabState extends State<ActiveTab> {
                                           ],
                                         ),
                                         SizedBox(
-                                          width: 5,
+                                          width: 8,
                                         ),
                                         Column(
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              '4',
+                                              '04',
                                               style: TextStyle(
                                                 fontWeight: FontWeight.bold,
                                               ),
                                             ),
                                             Text(
-                                              'Bathroom',
+                                              'Bedroom',
                                               style: TextStyle(fontSize: 13),
                                             ),
                                           ],
@@ -541,63 +554,69 @@ class _ActiveTabState extends State<ActiveTab> {
                           ),
                           Row(
                             children: [
-                              Container(
-                                height: 50,
-                                // width: 130,
-                                child: Card(
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(32)),
-                                    color: HexColor("#F4F4F4"),
-                                    elevation: 2,
-                                    child: Center(
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Image.asset(
-                                            "images/order.png",
-                                            height: 30,
-                                          ),
-                                          Text(
-                                            'Floor cleaning  ',
-                                            style: TextStyle(
-                                                color: Colors.black87,
-                                                fontSize: 15,
-                                                fontWeight: FontWeight.w400),
-                                          ),
-                                        ],
+                              GestureDetector(
+                                onTap:(){},
+                                child: Container(
+                                  height: 45,
+                                  //  width: 130,
+
+                                  decoration: BoxDecoration(
+                                    color:Color(0xFFf7f7f7),
+                                    borderRadius: BorderRadius.circular(32),
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                    MainAxisAlignment.center,
+                                    children: [
+                                      SizedBox(width: 15),
+                                      SvgPicture.asset(
+                                        "assets/icons/floorcleaningsvg.svg",
+                                        height: 20,
                                       ),
-                                    )),
+                                      SizedBox(width: 10),
+                                      Text(
+                                        'Floor cleaning',
+                                        style: TextStyle(
+                                            color: Colors.black87,
+                                            fontSize: 13,
+                                            fontWeight: FontWeight.w400),
+                                      ),
+                                      SizedBox(width: 15),
+                                    ],
+                                  ),
+                                ),
                               ),
-                              Container(
-                                height: 50,
-                                //  width: 130,
-                                child: Card(
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(32)),
-                                    color: HexColor("#F4F4F4"),
-                                    elevation: 2,
-                                    child: Center(
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Image.asset(
-                                            "images/waching.png",
-                                            height: 30,
-                                          ),
-                                          Text(
-                                            'Washing clothes  ',
-                                            style: TextStyle(
-                                                color: Colors.black87,
-                                                fontSize: 15,
-                                                fontWeight: FontWeight.w400),
-                                          ),
-                                        ],
+                              GestureDetector(
+                                onTap:(){},
+                                child: Container(
+                                  height: 45,
+                                  //  width: 130,
+
+                                  decoration: BoxDecoration(
+                                    color:Color(0xFFf7f7f7),
+                                    borderRadius: BorderRadius.circular(32),
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                    MainAxisAlignment.center,
+                                    children: [
+                                      SizedBox(width: 15),
+                                      SvgPicture.asset(
+                                        "assets/icons/washedclothes.svg",
+                                        height: 21,
                                       ),
-                                    )),
+                                      SizedBox(width: 10),
+                                      Text(
+                                        'Washing clothes  ',
+                                        style: TextStyle(
+                                            color: Colors.black87,
+                                            fontSize: 13,
+                                            fontWeight: FontWeight.w400),
+                                      ),
+                                      SizedBox(width: 15),
+                                    ],
+                                  ),
+                                ),
                               ),
                             ],
                           ),

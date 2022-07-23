@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get_core/get_core.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -166,9 +168,22 @@ class _ProfileIdentificationState extends State<ProfileIdentification> {
                             elevation: 4,
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(14),
-                              child: Image.asset(
-                                "images/upload.PNG",
-                                fit: BoxFit.fill,
+                              child: Padding(
+                                padding:  EdgeInsets.all(8.0),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    SvgPicture.asset(
+                                      "assets/icons/cloudsvg.svg",
+                                      width: 20,
+
+
+
+                                    ),
+
+                                    Text('Upload',style: TextStyle(color: HexColor('#666666')),),
+                                  ],
+                                ),
                               ),
                             ),
                           ),

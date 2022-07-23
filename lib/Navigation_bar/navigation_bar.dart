@@ -8,6 +8,8 @@ import 'package:service_app/looking%20for%20cleaner%20_screns/page22.dart';
 import 'package:service_app/looking%20for%20cleaner%20_screns/page_15_myorder/page_15my_order.dart';
 import 'package:service_app/screens/get_cleaner.dart';
 
+import '../i am_cleaner/Bottom_sheets/bottomsheet1.dart';
+
 class MainBottomClass extends StatefulWidget {
   const MainBottomClass({Key? key}) : super(key: key);
 
@@ -53,30 +55,55 @@ class _MainBottomClassState extends State<MainBottomClass> {
 
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            label: 'Home',
-            icon: Icon(
-              Icons.home,
+            icon: ImageIcon(
+              AssetImage('assets/icons/home.png'),
+              size: 22,
             ),
+            label: 'Home',
           ),
-          BottomNavigationBarItem(label: 'My order', icon: Icon(Icons.shop)),
           BottomNavigationBarItem(
-            label: 'Notification',
-            icon: Icon(Icons.notifications),
+            icon: ImageIcon(
+              AssetImage('assets/icons/orders.png'),
+              size: 22,
+            ),
+            label: 'My orders',
           ),
-          BottomNavigationBarItem(label: 'setting', icon: Icon(Icons.settings)),
+          BottomNavigationBarItem(
+            icon: ImageIcon(
+              AssetImage('assets/icons/notifications.png'),
+              size: 22,
+            ),
+            label: 'Notifications',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.settings,
+              size: 22,
+            ),
+            label: 'Settings',
+          ),
         ],
         currentIndex: selectedIndex,
 
         onTap: onItemTapped,
 
-        selectedIconTheme:
-            IconThemeData(color: Color.fromARGB(255, 244, 54, 228)),
-        unselectedItemColor: HexColor("#20204a"),
         unselectedLabelStyle: TextStyle(
-          color: HexColor("#20204a"),
+          fontSize: configSize(context).width * 0.033,
+          fontFamily: 'SF-Pro-Dis-Regular',
+          color: Color(0xff202020).withOpacity(0.01),
+        ),
+        unselectedIconTheme: IconThemeData(
+          size: configSize(context).width * 0.033,
+          color: Color(0xff202020).withOpacity(0.5),
         ),
         selectedLabelStyle: TextStyle(
-          color: HexColor("#20204a"),
+          fontSize: configSize(context).width * 0.033,
+          fontFamily: 'SF-Pro-Display',
+          color: Colors.black,
+        ),
+        selectedIconTheme: IconThemeData(
+          size: configSize(context).width * 0.036,
+          color: Colors.black,
         ),
       ),
     );

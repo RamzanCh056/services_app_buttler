@@ -167,9 +167,7 @@ class ProfileIdentificationMap extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: sizeConfiq(context).height * 0.04,
-                )
+
               ],
             ),
           ),

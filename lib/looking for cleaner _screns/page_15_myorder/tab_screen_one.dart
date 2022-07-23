@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:service_app/looking%20for%20cleaner%20_screns/my_home_aditional.dart';
+import 'package:service_app/widgets/constant.dart';
 
 class TabScreen_One extends StatelessWidget {
   @override
@@ -228,10 +230,12 @@ class TabScreen_One extends StatelessWidget {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          Image.asset(
-                                            "images/order.png",
-                                            height: 30,
+                                          SizedBox(width: sizeConfiq(context).width*0.02,),
+                                          SvgPicture.asset(
+                                            'images/floorcleaningsvg.svg',
+                                            height: 18,
                                           ),
+                                          SizedBox(width: sizeConfiq(context).width*0.02,),
                                           Text(
                                             'Floor cleaning  ',
                                             style: TextStyle(
@@ -257,10 +261,12 @@ class TabScreen_One extends StatelessWidget {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          Image.asset(
-                                            "images/waching.png",
-                                            height: 30,
+                                          SizedBox(width: sizeConfiq(context).width*0.02,),
+                                          SvgPicture.asset(
+                                           'images/washedclothes.svg',
+                                            height: 18,
                                           ),
+                                          SizedBox(width: sizeConfiq(context).width*0.02,),
                                           Text(
                                             'Washing clothes  ',
                                             style: TextStyle(
@@ -515,10 +521,12 @@ class TabScreen_One extends StatelessWidget {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          Image.asset(
-                                            "images/order.png",
-                                            height: 30,
+                                          SizedBox(width: sizeConfiq(context).width*0.02,),
+                                          SvgPicture.asset(
+                                            'images/floorcleaningsvg.svg',
+                                            height: 18,
                                           ),
+                                          SizedBox(width: sizeConfiq(context).width*0.02,),
                                           Text(
                                             'Floor cleaning  ',
                                             style: TextStyle(
@@ -544,10 +552,12 @@ class TabScreen_One extends StatelessWidget {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          Image.asset(
-                                            "images/waching.png",
-                                            height: 30,
+                                          SizedBox(width: sizeConfiq(context).width*0.02,),
+                                          SvgPicture.asset(
+                                            'images/washedclothes.svg',
+                                            height: 18,
                                           ),
+                                          SizedBox(width: sizeConfiq(context).width*0.02,),
                                           Text(
                                             'Washing clothes  ',
                                             style: TextStyle(

@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:service_app/authentications/signup.dart';
 import 'package:service_app/looking%20for%20cleaner%20_screns/messenger_screen.dart';
 import 'package:service_app/looking%20for%20cleaner%20_screns/my_home_aditional.dart';
+
+import '../../widgets/constant.dart';
 
 class TabScreenThree extends StatefulWidget {
   const TabScreenThree({Key? key}) : super(key: key);
@@ -256,25 +259,26 @@ class _TabScreenThreeState extends State<TabScreenThree> {
                                       child: Card(
                                           shape: RoundedRectangleBorder(
                                               borderRadius:
-                                                  BorderRadius.circular(32)),
+                                              BorderRadius.circular(32)),
                                           color: HexColor("#F4F4F4"),
                                           elevation: 2,
                                           child: Center(
                                             child: Row(
                                               mainAxisAlignment:
-                                                  MainAxisAlignment.center,
+                                              MainAxisAlignment.center,
                                               children: [
-                                                Image.asset(
-                                                  "images/order.png",
-                                                  height: 30,
+                                                SizedBox(width: sizeConfiq(context).width*0.02,),
+                                                SvgPicture.asset(
+                                                  'images/floorcleaningsvg.svg',
+                                                  height: 18,
                                                 ),
+                                                SizedBox(width: sizeConfiq(context).width*0.02,),
                                                 Text(
                                                   'Floor cleaning  ',
                                                   style: TextStyle(
                                                       color: Colors.black87,
                                                       fontSize: 15,
-                                                      fontWeight:
-                                                          FontWeight.w400),
+                                                      fontWeight: FontWeight.w400),
                                                 ),
                                               ],
                                             ),
@@ -286,25 +290,26 @@ class _TabScreenThreeState extends State<TabScreenThree> {
                                       child: Card(
                                           shape: RoundedRectangleBorder(
                                               borderRadius:
-                                                  BorderRadius.circular(32)),
+                                              BorderRadius.circular(32)),
                                           color: HexColor("#F4F4F4"),
                                           elevation: 2,
                                           child: Center(
                                             child: Row(
                                               mainAxisAlignment:
-                                                  MainAxisAlignment.center,
+                                              MainAxisAlignment.center,
                                               children: [
-                                                Image.asset(
-                                                  "images/waching.png",
-                                                  height: 30,
+                                                SizedBox(width: sizeConfiq(context).width*0.02,),
+                                                SvgPicture.asset(
+                                                  'images/washedclothes.svg',
+                                                  height: 18,
                                                 ),
+                                                SizedBox(width: sizeConfiq(context).width*0.02,),
                                                 Text(
                                                   'Washing clothes  ',
                                                   style: TextStyle(
                                                       color: Colors.black87,
                                                       fontSize: 15,
-                                                      fontWeight:
-                                                          FontWeight.w400),
+                                                      fontWeight: FontWeight.w400),
                                                 ),
                                               ],
                                             ),

@@ -133,16 +133,15 @@ class ProfileScreen extends StatelessWidget {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Image.asset(
-                                    'assets/icons/Path 37.png',
-                                    color: Color(0xFF666666),
-                                  ),
+                                  Icon(Icons.location_on_outlined,
+                                      color: Color(0xFF666666),
+                                      size: sizeConfiq(context).width * 0.05),
                                   SizedBox(
                                     width: sizeConfiq(context).width * 0.01,
                                   ),
-                                  Image.asset(
-                                    'assets/images/Preston Rd. Ing.png',
-                                  ),
+                                  Text('Preston Rd. Inglewood',
+                                      style:
+                                          TextStyle(color: Color(0xFF666666))),
                                 ],
                               ),
                               SizedBox(

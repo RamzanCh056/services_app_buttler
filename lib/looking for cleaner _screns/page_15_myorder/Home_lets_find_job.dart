@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:service_app/i%20am_cleaner/my_Home_apply.dart';
@@ -11,6 +12,12 @@ class HomeLetsFindJob extends StatefulWidget {
 }
 
 class _HomeLetsFindJobState extends State<HomeLetsFindJob> {
+  int selectedIndex = 0;
+  void onItemTapped(int index) {
+    setState(() {
+      selectedIndex = index;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -106,6 +113,7 @@ class _HomeLetsFindJobState extends State<HomeLetsFindJob> {
                         height: 10,
                       ),
                       Column(
+
                         children: [
                           Card(
                             shape: RoundedRectangleBorder(
@@ -113,6 +121,7 @@ class _HomeLetsFindJobState extends State<HomeLetsFindJob> {
                             child: Padding(
                               padding: const EdgeInsets.all(20.0),
                               child: Column(
+                                
                                 children: [
                                   ListTile(
                                     leading: CircleAvatar(
@@ -128,12 +137,10 @@ class _HomeLetsFindJobState extends State<HomeLetsFindJob> {
                                           fontWeight: FontWeight.bold),
                                     ),
                                     subtitle: Row(
+                                      mainAxisAlignment: MainAxisAlignment.start,
                                       children: [
-                                        Icon(
-                                          Icons.location_on_outlined,
-                                          size: 18,
-                                          color: Colors.black87,
-                                        ),
+                                        SvgPicture.asset('assets/icons/svgLocation.svg'),
+                                        SizedBox(width:2),
                                         Text(
                                           "Preston Rd, inglewood",
                                           style: TextStyle(
@@ -169,9 +176,12 @@ class _HomeLetsFindJobState extends State<HomeLetsFindJob> {
                                               MainAxisAlignment.center,
                                           children: [
                                             Icon(Icons.date_range_outlined),
-                                            Text('22May'),
                                             SizedBox(
                                               width: 4,
+                                            ),
+                                            Text('22May'),
+                                            SizedBox(
+                                              width: 8,
                                             ),
                                             Icon(Icons.timelapse),
                                             SizedBox(
@@ -188,128 +198,127 @@ class _HomeLetsFindJobState extends State<HomeLetsFindJob> {
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.only(top: 18.0),
-                                    child: SingleChildScrollView(
-                                      scrollDirection: Axis.horizontal,
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Column(
-                                            children: [
-                                              Row(
-                                                children: [
-                                                  Column(
-                                                    children: [
-                                                      Image.asset(
-                                                        "images/buildone.png",
-                                                        height: 23,
+                                    child: Row(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Column(
+                                          children: [
+                                            Row(
+                                              children: [
+                                                Column(
+                                                  children: [
+                                                    Image.asset(
+                                                      "images/buildone.png",
+                                                      height: 23,
+                                                      width:25,
+                                                    ),
+                                                  ],
+                                                ),
+                                                SizedBox(
+                                                  width: 5,
+                                                ),
+                                                Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment
+                                                          .start,
+                                                  children: [
+                                                    Text(
+                                                      '23',
+                                                      style: TextStyle(
+                                                        fontWeight:
+                                                            FontWeight.bold,
                                                       ),
-                                                    ],
-                                                  ),
-                                                  SizedBox(
-                                                    width: 5,
-                                                  ),
-                                                  Column(
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      Text(
-                                                        '23',
-                                                        style: TextStyle(
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                        ),
+                                                    ),
+                                                    Text(
+                                                      'building size',
+                                                      style: TextStyle(
+                                                          fontSize: 13),
+                                                    ),
+                                                  ],
+                                                )
+                                              ],
+                                            ),
+                                          ],
+                                        ),
+                                        Column(
+                                          children: [
+                                            Row(
+                                              children: [
+                                                Column(
+                                                  children: [
+                                                    Image.asset(
+                                                      "images/bathone.png",
+                                                      height: 23,
+                                                      width:30,
+                                                    ),
+                                                  ],
+                                                ),
+                                                SizedBox(
+                                                  width: 5,
+                                                ),
+                                                Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment
+                                                          .start,
+                                                  children: [
+                                                    Text(
+                                                      '8',
+                                                      style: TextStyle(
+                                                        fontWeight:
+                                                            FontWeight.bold,
                                                       ),
-                                                      Text(
-                                                        'building size',
-                                                        style: TextStyle(
-                                                            fontSize: 13),
+                                                    ),
+                                                    Text(
+                                                      'Bathroom',
+                                                      style: TextStyle(
+                                                          fontSize: 13),
+                                                    ),
+                                                  ],
+                                                )
+                                              ],
+                                            ),
+                                          ],
+                                        ),
+                                        Column(
+                                          children: [
+                                            Row(
+                                              children: [
+                                                Column(
+                                                  children: [
+                                                    Image.asset(
+                                                      "images/bathtwo.png",
+                                                      height: 23,
+                                                      width:30,
+                                                    ),
+                                                  ],
+                                                ),
+                                                SizedBox(
+                                                  width: 5,
+                                                ),
+                                                Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment
+                                                          .start,
+                                                  children: [
+                                                    Text(
+                                                      '4',
+                                                      style: TextStyle(
+                                                        fontWeight:
+                                                            FontWeight.bold,
                                                       ),
-                                                    ],
-                                                  )
-                                                ],
-                                              ),
-                                            ],
-                                          ),
-                                          Column(
-                                            children: [
-                                              Row(
-                                                children: [
-                                                  Column(
-                                                    children: [
-                                                      Image.asset(
-                                                        "images/bathone.png",
-                                                        height: 23,
-                                                      ),
-                                                    ],
-                                                  ),
-                                                  SizedBox(
-                                                    width: 5,
-                                                  ),
-                                                  Column(
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      Text(
-                                                        '8',
-                                                        style: TextStyle(
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                        ),
-                                                      ),
-                                                      Text(
-                                                        'Bathroom',
-                                                        style: TextStyle(
-                                                            fontSize: 13),
-                                                      ),
-                                                    ],
-                                                  )
-                                                ],
-                                              ),
-                                            ],
-                                          ),
-                                          Column(
-                                            children: [
-                                              Row(
-                                                children: [
-                                                  Column(
-                                                    children: [
-                                                      Image.asset(
-                                                        "images/bathtwo.png",
-                                                        height: 23,
-                                                      ),
-                                                    ],
-                                                  ),
-                                                  SizedBox(
-                                                    width: 5,
-                                                  ),
-                                                  Column(
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      Text(
-                                                        '4',
-                                                        style: TextStyle(
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                        ),
-                                                      ),
-                                                      Text(
-                                                        'Bathroom',
-                                                        style: TextStyle(
-                                                            fontSize: 13),
-                                                      ),
-                                                    ],
-                                                  )
-                                                ],
-                                              ),
-                                            ],
-                                          )
-                                        ],
-                                      ),
+                                                    ),
+                                                    Text(
+                                                      'Bathroom',
+                                                      style: TextStyle(
+                                                          fontSize: 13),
+                                                    ),
+                                                  ],
+                                                )
+                                              ],
+                                            ),
+                                          ],
+                                        )
+                                      ],
                                     ),
                                   ),
                                   SizedBox(
@@ -331,10 +340,19 @@ class _HomeLetsFindJobState extends State<HomeLetsFindJob> {
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
                                                 children: [
-                                                  Image.asset(
-                                                    "images/order.png",
-                                                    height: 30,
+                                                  SizedBox(width:10),
+                                                  Padding(
+                                                    padding:  EdgeInsets.zero,
+                                                    
+                                                    child: SvgPicture.asset(
+                                                      
+                                                      "assets/icons/floorcleaningsvg.svg",
+                                                      height:20,
+                                                      width:20,
+                                                     
+                                                    ),
                                                   ),
+                                                  SizedBox(width:7),
                                                   Text(
                                                     'Floor cleaning  ',
                                                     style: TextStyle(
@@ -343,36 +361,47 @@ class _HomeLetsFindJobState extends State<HomeLetsFindJob> {
                                                         fontWeight:
                                                             FontWeight.w400),
                                                   ),
+                                                  SizedBox(width:10),
                                                 ],
                                               ),
                                             )),
                                       ),
                                       Container(
                                         height: 50,
-                                        //  width: 130,
+                                        // width: 130,
                                         child: Card(
                                             shape: RoundedRectangleBorder(
                                                 borderRadius:
-                                                    BorderRadius.circular(32)),
+                                                BorderRadius.circular(32)),
                                             color: HexColor("#F4F4F4"),
                                             elevation: 2,
                                             child: Center(
                                               child: Row(
                                                 mainAxisAlignment:
-                                                    MainAxisAlignment.center,
+                                                MainAxisAlignment.center,
                                                 children: [
-                                                  Image.asset(
-                                                    "images/waching.png",
-                                                    height: 30,
+                                                  SizedBox(width:10),
+                                                  Padding(
+                                                    padding:  EdgeInsets.zero,
+
+                                                    child: SvgPicture.asset(
+
+                                                      "assets/icons/washedclothes.svg",
+                                                      height:20,
+                                                      width:20,
+
+                                                    ),
                                                   ),
+                                                  SizedBox(width:7),
                                                   Text(
-                                                    'Washing clothes  ',
+                                                    'Washing Clothes ',
                                                     style: TextStyle(
                                                         color: Colors.black87,
                                                         fontSize: 15,
                                                         fontWeight:
-                                                            FontWeight.w400),
+                                                        FontWeight.w400),
                                                   ),
+                                                  SizedBox(width:10),
                                                 ],
                                               ),
                                             )),
@@ -410,41 +439,53 @@ class _HomeLetsFindJobState extends State<HomeLetsFindJob> {
                                     padding: const EdgeInsets.only(top: 12.0),
                                     child: Row(
                                       mainAxisAlignment:
-                                          MainAxisAlignment.spaceAround,
+                                          MainAxisAlignment.spaceBetween,
                                       children: [
-                                        MaterialButton(
-                                          minWidth: 130,
-                                          height: 45,
-                                          shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(8.0),
-                                              side: BorderSide(
-                                                color: Colors.green.shade800,
-                                              )),
-                                          onPressed: () {},
-                                          child: Text("Cancel",
-                                              style: TextStyle(
-                                                color: Colors.green.shade800,
-                                              )),
+                                        Expanded(
+                                          
+                                          child: MaterialButton(
+                                            
+                                            minWidth: 130,
+                                            height: 50,
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(8.0),
+                                                side: BorderSide(
+                                                  color: Color(0xFF33ce85),
+                                                )),
+                                            onPressed: () {},
+                                            child: Text("Cancel",
+                                                style: TextStyle(
+                                                  color: Color(0xFF33ce85),
+                                                    fontWeight:FontWeight.bold,
+                                                    fontSize: 15
+                                                )),
+                                          ),
                                         ),
-                                        // SizedBox(width: 10,),
-                                        MaterialButton(
-                                          minWidth: 130,
-                                          height: 45,
-                                          color: Colors.green.shade800,
-                                          shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(8.0),
-                                              side: BorderSide(
-                                                color: Colors.green.shade800,
-                                              )),
-                                          onPressed: () {
-                                            Get.to(MyHomeAplly());
-                                          },
-                                          child: Text("Approve",
-                                              style: TextStyle(
-                                                color: Colors.white,
-                                              )),
+                                        SizedBox(width: 10,),
+                                        Expanded(
+
+                                          
+                                          child: MaterialButton(
+
+                                            height: 50,
+                                            color: Color(0xFF33ce85),
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(8.0),
+                                                side: BorderSide(
+                                                  color: Color(0xFF33ce85),
+                                                )),
+                                            onPressed: () {
+                                              Get.to(MyHomeAplly());
+                                            },
+                                            child: Text("Apply",
+                                                style: TextStyle(
+                                                  fontWeight:FontWeight.bold,
+                                                  fontSize: 15,
+                                                  color: Colors.white,
+                                                )),
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -462,13 +503,14 @@ class _HomeLetsFindJobState extends State<HomeLetsFindJob> {
                             child: Padding(
                               padding: const EdgeInsets.all(20.0),
                               child: Column(
+
                                 children: [
                                   ListTile(
                                     leading: CircleAvatar(
                                         backgroundColor: Colors.transparent,
                                         radius: 25,
                                         backgroundImage:
-                                            AssetImage("images/pexels.png")),
+                                        AssetImage("images/pexels.png")),
                                     title: Text(
                                       "My Home",
                                       style: TextStyle(
@@ -477,12 +519,10 @@ class _HomeLetsFindJobState extends State<HomeLetsFindJob> {
                                           fontWeight: FontWeight.bold),
                                     ),
                                     subtitle: Row(
+                                      mainAxisAlignment: MainAxisAlignment.start,
                                       children: [
-                                        Icon(
-                                          Icons.location_on_outlined,
-                                          size: 18,
-                                          color: Colors.black87,
-                                        ),
+                                        SvgPicture.asset('assets/icons/svgLocation.svg'),
+                                        SizedBox(width:2),
                                         Text(
                                           "Preston Rd, inglewood",
                                           style: TextStyle(
@@ -494,7 +534,6 @@ class _HomeLetsFindJobState extends State<HomeLetsFindJob> {
                                     ),
                                     trailing: Text(
                                       "\$255",
-                                      // textAlign: TextAlign.end,
                                       style: TextStyle(
                                           color: Colors.black,
                                           fontSize: 16,
@@ -516,12 +555,15 @@ class _HomeLetsFindJobState extends State<HomeLetsFindJob> {
                                             bottom: 8),
                                         child: Row(
                                           mainAxisAlignment:
-                                              MainAxisAlignment.center,
+                                          MainAxisAlignment.center,
                                           children: [
                                             Icon(Icons.date_range_outlined),
-                                            Text('22May'),
                                             SizedBox(
                                               width: 4,
+                                            ),
+                                            Text('22May'),
+                                            SizedBox(
+                                              width: 8,
                                             ),
                                             Icon(Icons.timelapse),
                                             SizedBox(
@@ -538,128 +580,127 @@ class _HomeLetsFindJobState extends State<HomeLetsFindJob> {
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.only(top: 18.0),
-                                    child: SingleChildScrollView(
-                                      scrollDirection: Axis.horizontal,
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Column(
-                                            children: [
-                                              Row(
-                                                children: [
-                                                  Column(
-                                                    children: [
-                                                      Image.asset(
-                                                        "images/buildone.png",
-                                                        height: 23,
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Column(
+                                          children: [
+                                            Row(
+                                              children: [
+                                                Column(
+                                                  children: [
+                                                    Image.asset(
+                                                      "images/buildone.png",
+                                                      height: 23,
+                                                      width:25,
+                                                    ),
+                                                  ],
+                                                ),
+                                                SizedBox(
+                                                  width: 5,
+                                                ),
+                                                Column(
+                                                  crossAxisAlignment:
+                                                  CrossAxisAlignment
+                                                      .start,
+                                                  children: [
+                                                    Text(
+                                                      '23',
+                                                      style: TextStyle(
+                                                        fontWeight:
+                                                        FontWeight.bold,
                                                       ),
-                                                    ],
-                                                  ),
-                                                  SizedBox(
-                                                    width: 5,
-                                                  ),
-                                                  Column(
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      Text(
-                                                        '23',
-                                                        style: TextStyle(
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                        ),
+                                                    ),
+                                                    Text(
+                                                      'building size',
+                                                      style: TextStyle(
+                                                          fontSize: 13),
+                                                    ),
+                                                  ],
+                                                )
+                                              ],
+                                            ),
+                                          ],
+                                        ),
+                                        Column(
+                                          children: [
+                                            Row(
+                                              children: [
+                                                Column(
+                                                  children: [
+                                                    Image.asset(
+                                                      "images/bathone.png",
+                                                      height: 23,
+                                                      width:30,
+                                                    ),
+                                                  ],
+                                                ),
+                                                SizedBox(
+                                                  width: 5,
+                                                ),
+                                                Column(
+                                                  crossAxisAlignment:
+                                                  CrossAxisAlignment
+                                                      .start,
+                                                  children: [
+                                                    Text(
+                                                      '8',
+                                                      style: TextStyle(
+                                                        fontWeight:
+                                                        FontWeight.bold,
                                                       ),
-                                                      Text(
-                                                        'building size',
-                                                        style: TextStyle(
-                                                            fontSize: 13),
+                                                    ),
+                                                    Text(
+                                                      'Bathroom',
+                                                      style: TextStyle(
+                                                          fontSize: 13),
+                                                    ),
+                                                  ],
+                                                )
+                                              ],
+                                            ),
+                                          ],
+                                        ),
+                                        Column(
+                                          children: [
+                                            Row(
+                                              children: [
+                                                Column(
+                                                  children: [
+                                                    Image.asset(
+                                                      "images/bathtwo.png",
+                                                      height: 23,
+                                                      width:30,
+                                                    ),
+                                                  ],
+                                                ),
+                                                SizedBox(
+                                                  width: 5,
+                                                ),
+                                                Column(
+                                                  crossAxisAlignment:
+                                                  CrossAxisAlignment
+                                                      .start,
+                                                  children: [
+                                                    Text(
+                                                      '4',
+                                                      style: TextStyle(
+                                                        fontWeight:
+                                                        FontWeight.bold,
                                                       ),
-                                                    ],
-                                                  )
-                                                ],
-                                              ),
-                                            ],
-                                          ),
-                                          Column(
-                                            children: [
-                                              Row(
-                                                children: [
-                                                  Column(
-                                                    children: [
-                                                      Image.asset(
-                                                        "images/bathone.png",
-                                                        height: 23,
-                                                      ),
-                                                    ],
-                                                  ),
-                                                  SizedBox(
-                                                    width: 5,
-                                                  ),
-                                                  Column(
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      Text(
-                                                        '8',
-                                                        style: TextStyle(
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                        ),
-                                                      ),
-                                                      Text(
-                                                        'Bathroom',
-                                                        style: TextStyle(
-                                                            fontSize: 13),
-                                                      ),
-                                                    ],
-                                                  )
-                                                ],
-                                              ),
-                                            ],
-                                          ),
-                                          Column(
-                                            children: [
-                                              Row(
-                                                children: [
-                                                  Column(
-                                                    children: [
-                                                      Image.asset(
-                                                        "images/bathtwo.png",
-                                                        height: 23,
-                                                      ),
-                                                    ],
-                                                  ),
-                                                  SizedBox(
-                                                    width: 5,
-                                                  ),
-                                                  Column(
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      Text(
-                                                        '4',
-                                                        style: TextStyle(
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                        ),
-                                                      ),
-                                                      Text(
-                                                        'Bathroom',
-                                                        style: TextStyle(
-                                                            fontSize: 13),
-                                                      ),
-                                                    ],
-                                                  )
-                                                ],
-                                              ),
-                                            ],
-                                          )
-                                        ],
-                                      ),
+                                                    ),
+                                                    Text(
+                                                      'Bathroom',
+                                                      style: TextStyle(
+                                                          fontSize: 13),
+                                                    ),
+                                                  ],
+                                                )
+                                              ],
+                                            ),
+                                          ],
+                                        )
+                                      ],
                                     ),
                                   ),
                                   SizedBox(
@@ -673,56 +714,76 @@ class _HomeLetsFindJobState extends State<HomeLetsFindJob> {
                                         child: Card(
                                             shape: RoundedRectangleBorder(
                                                 borderRadius:
-                                                    BorderRadius.circular(32)),
+                                                BorderRadius.circular(32)),
                                             color: HexColor("#F4F4F4"),
                                             elevation: 2,
                                             child: Center(
                                               child: Row(
                                                 mainAxisAlignment:
-                                                    MainAxisAlignment.center,
+                                                MainAxisAlignment.center,
                                                 children: [
-                                                  Image.asset(
-                                                    "images/order.png",
-                                                    height: 30,
+                                                  SizedBox(width:10),
+                                                  Padding(
+                                                    padding:  EdgeInsets.zero,
+
+                                                    child: SvgPicture.asset(
+
+                                                      "assets/icons/floorcleaningsvg.svg",
+                                                      height:20,
+                                                      width:20,
+
+                                                    ),
                                                   ),
+                                                  SizedBox(width:7),
                                                   Text(
                                                     'Floor cleaning  ',
                                                     style: TextStyle(
                                                         color: Colors.black87,
                                                         fontSize: 15,
                                                         fontWeight:
-                                                            FontWeight.w400),
+                                                        FontWeight.w400),
                                                   ),
+                                                  SizedBox(width:10),
                                                 ],
                                               ),
                                             )),
                                       ),
                                       Container(
                                         height: 50,
-                                        //  width: 130,
+                                        // width: 130,
                                         child: Card(
                                             shape: RoundedRectangleBorder(
                                                 borderRadius:
-                                                    BorderRadius.circular(32)),
+                                                BorderRadius.circular(32)),
                                             color: HexColor("#F4F4F4"),
                                             elevation: 2,
                                             child: Center(
                                               child: Row(
                                                 mainAxisAlignment:
-                                                    MainAxisAlignment.center,
+                                                MainAxisAlignment.center,
                                                 children: [
-                                                  Image.asset(
-                                                    "images/waching.png",
-                                                    height: 30,
+                                                  SizedBox(width:10),
+                                                  Padding(
+                                                    padding:  EdgeInsets.zero,
+
+                                                    child: SvgPicture.asset(
+
+                                                      "assets/icons/washedclothes.svg",
+                                                      height:20,
+                                                      width:20,
+
+                                                    ),
                                                   ),
+                                                  SizedBox(width:7),
                                                   Text(
-                                                    'Washing clothes  ',
+                                                    'Washing Clothes ',
                                                     style: TextStyle(
                                                         color: Colors.black87,
                                                         fontSize: 15,
                                                         fontWeight:
-                                                            FontWeight.w400),
+                                                        FontWeight.w400),
                                                   ),
+                                                  SizedBox(width:10),
                                                 ],
                                               ),
                                             )),
@@ -760,41 +821,53 @@ class _HomeLetsFindJobState extends State<HomeLetsFindJob> {
                                     padding: const EdgeInsets.only(top: 12.0),
                                     child: Row(
                                       mainAxisAlignment:
-                                          MainAxisAlignment.spaceAround,
+                                      MainAxisAlignment.spaceBetween,
                                       children: [
-                                        MaterialButton(
-                                          minWidth: 130,
-                                          height: 45,
-                                          shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(8.0),
-                                              side: BorderSide(
-                                                color: Colors.green.shade800,
-                                              )),
-                                          onPressed: () {},
-                                          child: Text("Cancel",
-                                              style: TextStyle(
-                                                color: Colors.green.shade800,
-                                              )),
+                                        Expanded(
+
+                                          child: MaterialButton(
+
+                                            minWidth: 130,
+                                            height: 50,
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                BorderRadius.circular(8.0),
+                                                side: BorderSide(
+                                                  color: Color(0xFF33ce85),
+                                                )),
+                                            onPressed: () {},
+                                            child: Text("Cancel",
+                                                style: TextStyle(
+                                                    color: Color(0xFF33ce85),
+                                                    fontWeight:FontWeight.bold,
+                                                    fontSize: 15
+                                                )),
+                                          ),
                                         ),
-                                        // SizedBox(width: 10,),
-                                        MaterialButton(
-                                          minWidth: 130,
-                                          height: 45,
-                                          color: Colors.green.shade800,
-                                          shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(8.0),
-                                              side: BorderSide(
-                                                color: Colors.green.shade800,
-                                              )),
-                                          onPressed: () {
-                                            Get.to(MyHomeAplly());
-                                          },
-                                          child: Text("Approve",
-                                              style: TextStyle(
-                                                color: Colors.white,
-                                              )),
+                                        SizedBox(width: 10,),
+                                        Expanded(
+
+
+                                          child: MaterialButton(
+
+                                            height: 50,
+                                            color: Color(0xFF33ce85),
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                BorderRadius.circular(8.0),
+                                                side: BorderSide(
+                                                  color: Color(0xFF33ce85),
+                                                )),
+                                            onPressed: () {
+                                              Get.to(MyHomeAplly());
+                                            },
+                                            child: Text("Apply",
+                                                style: TextStyle(
+                                                  fontWeight:FontWeight.bold,
+                                                  fontSize: 15,
+                                                  color: Colors.white,
+                                                )),
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -813,6 +886,42 @@ class _HomeLetsFindJobState extends State<HomeLetsFindJob> {
           )
         ],
       )),
+      bottomNavigationBar:BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.white,
+
+        fixedColor: HexColor("#20204a"),
+
+        //unselectedItemColor: Colors.white,
+
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            label: 'Home',
+            icon: Icon(
+              Icons.home,
+            ),
+          ),
+          BottomNavigationBarItem(label: 'My order', icon: Icon(Icons.shop)),
+          BottomNavigationBarItem(
+            label: 'Notification',
+            icon: Icon(Icons.notifications),
+          ),
+          BottomNavigationBarItem(label: 'setting', icon: Icon(Icons.settings)),
+        ],
+        currentIndex: selectedIndex,
+
+        onTap: onItemTapped,
+
+        selectedIconTheme:
+        IconThemeData(color: Color.fromARGB(255, 244, 54, 228)),
+        unselectedItemColor: HexColor("#20204a"),
+        unselectedLabelStyle: TextStyle(
+          color: HexColor("#20204a"),
+        ),
+        selectedLabelStyle: TextStyle(
+          color: HexColor("#20204a"),
+        ),
+      ),
     );
   }
 }
